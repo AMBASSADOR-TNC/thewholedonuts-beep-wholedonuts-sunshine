@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whole Donuts — Identity Launch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="fade">Whole Donuts — Identity Launch</h1>
+
+<div class="section fade">
+  <p>Paste Launch Cards 1–11 here. This is your foundation, identity origin, mission, purpose, and the opening identity sequence.</p>
+</div>
+
+<div class="nav fade">
+  <a href="ecosystem.html">Ecosystem</a>
+  <a href="identity-law.html">Identity Law</a>
+  <a href="story.html">Identity Story</a>
+  <a href="donor.html">Donor Page</a>
+</div>
+
+<script src="motion.js"></script>
+</body>
+</html>
