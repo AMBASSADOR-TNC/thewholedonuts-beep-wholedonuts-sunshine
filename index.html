@@ -1,44 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Canonical Whole Donuts unified ecosystem">
-  <title>Whole Donuts · Unified Ecosystem</title>
+  <meta name="description" content="We Never Gonna Close - Whole Donuts LLC Unified Ecosystem">
+  <title>We Never Gonna Close | Whole Donuts +U</title>
   <style>
-    :root { color-scheme: dark; --bg: #111827; --panel: #1f2937; --line: #374151; --text: #f9fafb; --muted: #cbd5e1; --accent: #f59e0b; --ok: #34d399; }
+    :root {
+      --primary: #f59e0b;
+      --dark: #111827;
+      --panel: #1f2937;
+      --text: #f9fafb;
+      --accent: #fbbf24;
+      --bzpz: #8b5cf6;
+      --plus-u: #ec4899;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; font: 16px/1.5 system-ui, sans-serif; color: var(--text); background: radial-gradient(circle at top, #26354a, var(--bg) 55%); }
-    main { width: min(960px, calc(100% - 32px)); margin: 0 auto; padding: 72px 0 48px; }
-    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    h1 { margin: 10px 0 16px; font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1; }
-    .intro { max-width: 680px; color: var(--muted); font-size: 1.2rem; }
-    .status { display: inline-flex; align-items: center; gap: 10px; margin: 28px 0; padding: 10px 14px; border: 1px solid #065f46; border-radius: 999px; color: #a7f3d0; background: rgba(6, 95, 70, .25); }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 14px var(--ok); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 24px; }
-    .card { display: block; padding: 22px; color: inherit; text-decoration: none; border: 1px solid var(--line); border-radius: 14px; background: rgba(31, 41, 55, .82); transition: transform .15s ease, border-color .15s ease; }
-    .card:hover, .card:focus-visible { transform: translateY(-3px); border-color: var(--accent); outline: none; }
-    .card h2 { margin: 0 0 8px; font-size: 1.25rem; }
-    .card p { margin: 0; color: var(--muted); }
-    footer { margin-top: 56px; color: #94a3b8; font-size: .9rem; }
+    body { margin: 0; min-height: 100vh; font: 16px/1.5 system-ui, sans-serif; color: var(--text); background: var(--dark); }
+    .stick-figures { font-size: 2rem; letter-spacing: 0.5rem; text-align: center; margin: 20px 0; }
+    .table-display { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .table-display th, .table-display td { padding: 12px; border: 1px solid var(--panel); text-align: left; }
+    .table-display th { background: var(--bzpz); color: var(--text); }
+    .counter { display: inline-block; padding: 10px 20px; background: var(--plus-u); color: var(--text); border-radius: 8px; font-weight: bold; }
+    .bzpzitv-tag { color: var(--bzpz); font-weight: 700; }
+    .plus-u-accent { color: var(--plus-u); }
+    main { width: min(960px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0; }
+    h1 { font-size: clamp(2rem, 8vw, 4rem); margin: 20px 0; }
+    nav { margin: 32px 0; }
+    nav a { display: inline-block; margin-right: 20px; color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    footer { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--panel); text-align: center; color: #94a3b8; }
   </style>
 </head>
 <body>
   <main>
-    <div class="eyebrow">Whole Donuts</div>
-    <h1>Unified ecosystem</h1>
-    <p class="intro">The canonical starting point for the Whole Donuts ecosystem. All supplied navigation points are connected below so the system can begin from one stable entry page.</p>
-    <div class="status" role="status"><span class="dot" aria-hidden="true"></span> System started · entry point ready</div>
+    <div class="stick-figures">👥 ◯ ◯ ◯ 👥</div>
+    <h1><span class="bzpzitv-tag">BZPZITV</span> × <span class="plus-u-accent">+U</span> Whole Donuts LLC</h1>
+    <p>We Never Gonna Close — The canonical entry point for the unified ecosystem.</p>
+    <div class="counter">System: ACTIVE +U</div>
+    
+    <table class="table-display">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Status</th>
+          <th>Access</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ecosystem Hub</td>
+          <td><span class="bzpzitv-tag">BZPZITV</span></td>
+          <td><a href="ecosystem.html">→</a></td>
+        </tr>
+        <tr>
+          <td>Identity Law</td>
+          <td><span class="plus-u-accent">+U Ready</span></td>
+          <td><a href="identity-law.html">→</a></td>
+        </tr>
+        <tr>
+          <td>Identity Story</td>
+          <td><span class="bzpzitv-tag">BZPZITV</span></td>
+          <td><a href="story.html">→</a></td>
+        </tr>
+        <tr>
+          <td>Donor Support</td>
+          <td><span class="plus-u-accent">+U Active</span></td>
+          <td><a href="donor.html">→</a></td>
+        </tr>
+      </tbody>
+    </table>
 
-    <nav class="grid" aria-label="Ecosystem navigation">
-      <a class="card" href="ecosystem.html"><h2>Ecosystem</h2><p>Explore the connected Whole Donuts ecosystem.</p></a>
-      <a class="card" href="identity-law.html"><h2>Identity Law</h2><p>Read the identity-law foundation.</p></a>
-      <a class="card" href="story.html"><h2>Identity Story</h2><p>Open the identity story and context.</p></a>
-      <a class="card" href="donor.html"><h2>Donor Page</h2><p>Visit the donor and support page.</p></a>
+    <nav>
+      <a href="ecosystem.html">Ecosystem <span class="plus-u-accent">+U</span></a>
+      <a href="identity-law.html">Identity Law</a>
+      <a href="story.html">Story</a>
+      <a href="donor.html">Donor</a>
     </nav>
 
-    <footer>Canonical Whole Donuts unified ecosystem · <span id="year"></span></footer>
+    <footer>
+      <p><strong>Whole Donuts LLC</strong> | We Never Gonna Close</p>
+      <p><span class="bzpzitv-tag">BZPZITV Protocol</span> × <span class="plus-u-accent">+U Framework</span></p>
+      <p>wenevergonnaclose.com © 2026. All rights reserved.</p>
+    </footer>
   </main>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
