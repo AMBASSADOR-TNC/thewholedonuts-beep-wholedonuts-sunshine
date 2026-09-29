@@ -3,105 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Identity Metaphysics — The 7 Laws">
-  <title>Whole Donuts — Identity Law</title>
+  <meta name="description" content="Whole Donuts ecosystem map and routing architecture">
+  <title>Whole Donuts — Ecosystem</title>
   <style>
     :root {
-      --bg: #111827;
-      --panel: #1f2937;
-      --text: #f9fafb;
+      --bg: #0b0f19;
+      --bg-2: #111827;
+      --panel: rgba(17, 24, 39, 0.85);
+      --text: #f8fafc;
       --muted: #cbd5e1;
+      --gold: #f5b942;
       --bzpz: #8b5cf6;
       --u: #ec4899;
-      --gold: #f59e0b;
+      --line: rgba(255,255,255,0.08);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, var(--bg), var(--bg-2));
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 24px 64px;
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 24px 72px; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0 28px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
     }
+    .brand { color: var(--gold); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+    .nav { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--text); }
     h1 {
-      font-size: clamp(2.25rem, 6vw, 4rem);
-      line-height: 1.1;
-      margin: 0 0 24px;
+      margin: 24px 0 12px;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
     }
-    h2 {
+    .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
+    .grid {
       margin-top: 28px;
-      margin-bottom: 14px;
-      font-size: 1.3rem;
-      color: var(--gold);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
-    p, a, li {
+    .panel {
+      background: rgba(17,24,39,0.82);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .panel h2 { margin: 0 0 12px; color: var(--gold); font-size: 1.2rem; }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); }
+    li + li { margin-top: 8px; }
+    .domain-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .domain {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
       color: var(--muted);
-      font-size: 1.05rem;
     }
-    a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
+    .domain strong { color: var(--text); }
     .tag {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 6px 10px;
       border-radius: 999px;
-      color: #fff;
-      background: rgba(139, 92, 246, 0.2);
-      border: 1px solid rgba(139, 92, 246, 0.7);
+      background: rgba(139,92,246,0.15);
+      color: var(--bzpz);
+      border: 1px solid rgba(139,92,246,0.5);
+      font-size: 0.74rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 18px;
-    }
-    .accent-bzpz { color: var(--bzpz); font-weight: 700; }
-    .accent-u { color: var(--u); font-weight: 700; }
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 18px;
-      margin-top: 24px;
-    }
-    ol {
-      padding-left: 24px;
-      margin: 18px 0;
-    }
-    ol li {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       margin-bottom: 12px;
-      line-height: 1.8;
     }
+    @media (max-width: 760px) { .grid, .domain-list { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <main>
-    <div class="tag">Whole Donuts</div>
-    <h1>Identity Metaphysics — The 7 Laws</h1>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Whole Donuts</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Index</a>
+        <a href="ecosystem.html">Ecosystem</a>
+        <a href="identity-law.html">Identity Law</a>
+        <a href="story.html">Story</a>
+        <a href="donor.html">Donor</a>
+      </nav>
+    </header>
 
-    <p>The foundational principles governing identity within the <span class="accent-bzpz">BZPZITV</span> × <span class="accent-u">+U</span> ecosystem.</p>
+    <main>
+      <div class="tag">Ecosystem</div>
+      <h1>Whole Donuts Ecosystem</h1>
+      <p class="lead">
+        The operating structure behind the movement: landing, identity, merch, and domain-routing nodes all work together as one network.
+        This is the map that turns the mission into a system.
+      </p>
 
-    <ol>
-      <li><strong>Origin</strong> → identity exists before form</li>
-      <li><strong>Duality</strong> → emotion = energy, logic = structure</li>
-      <li><strong>Interpretation</strong> → identity becomes real when interpreted</li>
-      <li><strong>Path</strong> → identity must travel to exist</li>
-      <li><strong>Completion</strong> → identity becomes truth only when whole</li>
-      <li><strong>Permanence</strong> → truth becomes eternal in the vault</li>
-      <li><strong>Equilibrium</strong> → identity requires balance to remain coherent</li>
-    </ol>
+      <div class="grid">
+        <section class="panel">
+          <h2>Service Architecture</h2>
+          <ul>
+            <li><strong>Landing</strong> — wenevergonnaclose.com as the gateway and first impression.</li>
+            <li><strong>Whole Donuts</strong> — wholedonuts.org, .app, .me, .pro, .buzz.</li>
+            <li><strong>Merch</strong> — wholedonuts.store and thenutur3dchef.com for commerce and support.</li>
+            <li><strong>Nurtured Chef</strong> — thenurturedchef.com and .foundation.</li>
+          </ul>
+        </section>
 
-    <h2>Navigation</h2>
-    <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="identity-law.html">Identity Law</a>
-      <a href="story.html">Identity Story</a>
-      <a href="donor.html">Donor Page</a>
-    </div>
-  </main>
+        <section class="panel">
+          <h2>System Logic</h2>
+          <ul>
+            <li>Origin starts at the landing page and routes by domain identity.</li>
+            <li>Service detection maps hostnames to the correct operational lane.</li>
+            <li>Domain routing ensures each section behaves as part of a unified movement.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="domain-list" aria-label="Active domains">
+        <div class="domain"><strong>wenevergonnaclose.com</strong><br>Entry gateway</div>
+        <div class="domain"><strong>wholedonuts.org</strong><br>Main Whole Donuts node</div>
+        <div class="domain"><strong>wholedonuts.app</strong><br>App / product layer</div>
+        <div class="domain"><strong>wholedonuts.me</strong><br>Community layer</div>
+        <div class="domain"><strong>wholedonuts.pro</strong><br>Professional layer</div>
+        <div class="domain"><strong>wholedonuts.buzz</strong><br>Story and reach layer</div>
+        <div class="domain"><strong>wholedonuts.store</strong><br>Merch storefront</div>
+        <div class="domain"><strong>thenurturedchef.com</strong><br>Main Nurtured Chef node</div>
+        <div class="domain"><strong>thenurturedchef.foundation</strong><br>Foundation layer</div>
+        <div class="domain"><strong>thenutur3dchef.com</strong><br>Merch / commerce layer</div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

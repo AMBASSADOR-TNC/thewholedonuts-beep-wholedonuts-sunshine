@@ -3,93 +3,145 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Identity Story">
-  <title>Whole Donuts — Identity Story</title>
+  <meta name="description" content="Identity Law — The seven principles of the Whole Donuts movement">
+  <title>Whole Donuts — Identity Law</title>
   <style>
     :root {
-      --bg: #111827;
-      --panel: #1f2937;
-      --text: #f9fafb;
+      --bg: #0b0f19;
+      --bg-2: #111827;
+      --panel: rgba(17,24,39,0.85);
+      --text: #f8fafc;
       --muted: #cbd5e1;
+      --gold: #f5b942;
       --bzpz: #8b5cf6;
       --u: #ec4899;
-      --gold: #f59e0b;
+      --line: rgba(255,255,255,0.08);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, var(--bg), var(--bg-2));
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 24px 64px;
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 24px 72px; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0 28px; border-bottom: 1px solid var(--line); flex-wrap: wrap;
     }
+    .brand { color: var(--gold); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+    .nav { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--text); }
     h1 {
-      font-size: clamp(2.25rem, 6vw, 4rem);
-      line-height: 1.1;
-      margin: 0 0 24px;
+      margin: 24px 0 12px;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
     }
-    h2 {
-      margin-top: 28px;
-      margin-bottom: 14px;
-      font-size: 1.3rem;
-      color: var(--gold);
-    }
-    p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin: 14px 0;
-    }
+    .lead { color: var(--muted); max-width: 760px; font-size: 1.08rem; }
     .tag {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 6px 10px;
       border-radius: 999px;
-      color: #fff;
-      background: rgba(139, 92, 246, 0.2);
-      border: 1px solid rgba(139, 92, 246, 0.7);
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 18px;
-    }
-    .accent-bzpz { color: var(--bzpz); font-weight: 700; }
-    .accent-u { color: var(--u); font-weight: 700; }
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 18px;
-      margin-top: 24px;
-    }
-    a {
+      background: rgba(245,185,66,0.14);
       color: var(--gold);
-      text-decoration: none;
+      border: 1px solid rgba(245,185,66,0.55);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
-    a:hover { text-decoration: underline; }
+    .law-grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .law {
+      background: rgba(17,24,39,0.85);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .law h2 {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      color: var(--gold);
+    }
+    .law p { margin: 0; color: var(--muted); }
+    .law-number {
+      color: var(--u);
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 760px) { .law-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <main>
-    <div class="tag">Whole Donuts</div>
-    <h1>Identity Story</h1>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Whole Donuts</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Index</a>
+        <a href="ecosystem.html">Ecosystem</a>
+        <a href="identity-law.html">Identity Law</a>
+        <a href="story.html">Story</a>
+        <a href="donor.html">Donor</a>
+      </nav>
+    </header>
 
-    <p>Launch Cards 21–24: narrative, origin story, movement, and identity journey.</p>
+    <main>
+      <div class="tag">Identity Law</div>
+      <h1>The Seven Laws</h1>
+      <p class="lead">
+        Identity is not decoration. It is structure. These seven laws define how the system persists,
+        repairs itself, and remains faithful to the mission through every stage of growth.
+      </p>
 
-    <p>This is your story. Your narrative, your origin, your movement within the <span class="accent-bzpz">BZPZITV</span> × <span class="accent-u">+U</span> ecosystem.</p>
-
-    <h2>Your Journey</h2>
-    <p>We Never Gonna Close. The story of identity is the story of persistence, of movement, of becoming whole.</p>
-
-    <h2>Navigation</h2>
-    <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="identity-law.html">Identity Law</a>
-      <a href="story.html">Identity Story</a>
-      <a href="donor.html">Donor Page</a>
-    </div>
-  </main>
+      <div class="law-grid">
+        <article class="law">
+          <div class="law-number">Law 1</div>
+          <h2>We are not closed</h2>
+          <p>Identity remains open to repair, growth, and transformation without surrendering core truth.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 2</div>
+          <h2>Truth is the base layer</h2>
+          <p>Everything in the ecosystem must align with truth, not spectacle, and not temporary performance.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 3</div>
+          <h2>Repair is sacred</h2>
+          <p>When the system breaks, the mission does not collapse; it rebuilds itself with more integrity.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 4</div>
+          <h2>Contribution is identity</h2>
+          <p>People become part of the mission through service, not merely by consuming a brand experience.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 5</div>
+          <h2>We hold the story</h2>
+          <p>The movement tells its own narrative. Every domain, every interaction, every community layer carries the story.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 6</div>
+          <h2>Value is relational</h2>
+          <p>The ecosystem is strongest when it supports relationships, trust, and mutual effort across all lanes.</p>
+        </article>
+        <article class="law">
+          <div class="law-number">Law 7</div>
+          <h2>We continue</h2>
+          <p>Persistence is the final law: the mission does not vanish; it keeps moving, adapting, and carrying forward.</p>
+        </article>
+      </div>
+    </main>
+  </div>
 </body>
 </html>

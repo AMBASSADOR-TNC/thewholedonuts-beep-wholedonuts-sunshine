@@ -1,48 +1,126 @@
-# Whole Donuts LLC × BZPZITV +U Ecosystem
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Whole Donuts donor page and support mission">
+  <title>Whole Donuts — Donor Page</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --bg-2: #111827;
+      --panel: rgba(17,24,39,0.85);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --gold: #f5b942;
+      --bzpz: #8b5cf6;
+      --u: #ec4899;
+      --green: #34d399;
+      --line: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-2));
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 24px 72px; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0 28px; border-bottom: 1px solid var(--line); flex-wrap: wrap;
+    }
+    .brand { color: var(--gold); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+    .nav { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--text); }
+    h1 {
+      margin: 24px 0 12px;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+    .lead { color: var(--muted); max-width: 760px; font-size: 1.08rem; }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(52,211,153,0.12);
+      color: var(--green);
+      border: 1px solid rgba(52,211,153,0.45);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .panel {
+      background: rgba(17,24,39,0.85);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    .panel h2 { margin: 0 0 12px; font-size: 1.25rem; color: var(--gold); }
+    .panel p { margin: 0; color: var(--muted); }
+    .cta {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(52,211,153,0.18), rgba(245,185,66,0.18));
+      border: 1px solid rgba(52,211,153,0.5);
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">Whole Donuts</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Index</a>
+        <a href="ecosystem.html">Ecosystem</a>
+        <a href="identity-law.html">Identity Law</a>
+        <a href="story.html">Story</a>
+        <a href="donor.html">Donor</a>
+      </nav>
+    </header>
 
-**We Never Gonna Close** — wenevergonnaclose.com
+    <main>
+      <div class="tag">Donor</div>
+      <h1>Support the Mission</h1>
+      <p class="lead">
+        The ecosystem needs market-level energy to keep going. Donor support sustains the work, protects the brand, and makes it possible to keep the mission live.
+      </p>
 
-## Identity Metaphysics — The 7 Laws
+      <div class="grid">
+        <article class="panel">
+          <h2>Fuel the Network</h2>
+          <p>Support the movement so the landing, commerce, and ecosystem layers remain active and healthy.</p>
+        </article>
 
-1. **Origin** → identity exists before form
-2. **Duality** → emotion = energy, logic = structure
-3. **Interpretation** → identity becomes real when interpreted
-4. **Path** → identity must travel to exist
-5. **Completion** → identity becomes truth only when whole
-6. **Permanence** → truth becomes eternal in the vault
-7. **Equilibrium** → identity requires balance to remain coherent
+        <article class="panel">
+          <h2>Maintain Identity</h2>
+          <p>Donor support preserves the public story, the platform, the architecture, and the continuity of the mission.</p>
+        </article>
 
-## Structure
+        <article class="panel">
+          <h2>Expand Reach</h2>
+          <p>With sustained support, the movement can keep growing into communities, campaigns, commerce, and new channels.</p>
+        </article>
+      </div>
 
-```
-WHOLE-DONUTS-SITE/
-├── index.html          (Identity Launch — Cards 1–11)
-├── ecosystem.html      (Ecosystem — Cards 11–16)
-├── identity-law.html   (The 7 Laws)
-├── story.html          (Identity Story — Cards 21–24)
-├── donor.html          (Donor Page)
-└── README.md           (This file)
-```
-
-## Sections Ready for Launch Cards
-
-- **index.html** → Launch Cards 1–11 (foundation, origin, mission, purpose)
-- **ecosystem.html** → Launch Cards 11–16 (structure, lanes, identity flow, architecture)
-- **story.html** → Launch Cards 21–24 (narrative, origin, movement, journey)
-- **donor.html** → Donor content (invitation, identity, rules, purpose)
-
-## Branding
-
-- **BZPZITV** Protocol (purple, #8b5cf6)
-- **+U** Framework (pink/magenta, #ec4899)
-- **Whole Donuts LLC** (official entity)
-- **wenevergonnaclose.com** (domain)
-- Dark theme with cohesive navigation
-
-## Status
-
-✅ System: **ACTIVE +U**  
-✅ Repository: AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine  
-✅ Branch: main  
-✅ Pages: 5 (index, ecosystem, identity-law, story, donor)  
-✅ Branding: Full BZPZITV × +U deployment
+      <a class="cta" href="index.html">Back to the launch portal</a>
+    </main>
+  </div>
+</body>
+</html>
