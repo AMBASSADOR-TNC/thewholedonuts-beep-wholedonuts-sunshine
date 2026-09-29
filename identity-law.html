@@ -1,151 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Whole Donuts ecosystem map and routing architecture">
-  <title>Whole Donuts — Ecosystem</title>
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --bg-2: #111827;
-      --panel: rgba(17, 24, 39, 0.85);
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --gold: #f5b942;
-      --bzpz: #8b5cf6;
-      --u: #ec4899;
-      --line: rgba(255,255,255,0.08);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, var(--bg), var(--bg-2));
-      color: var(--text);
-      line-height: 1.65;
-    }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 24px 72px; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 18px 0 28px;
-      border-bottom: 1px solid var(--line);
-      flex-wrap: wrap;
-    }
-    .brand { color: var(--gold); font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
-    .nav { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); }
-    .nav a { color: var(--muted); text-decoration: none; }
-    .nav a:hover { color: var(--text); }
-    h1 {
-      margin: 24px 0 12px;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1;
-      letter-spacing: -0.06em;
-    }
-    .lead { max-width: 760px; color: var(--muted); font-size: 1.08rem; }
-    .grid {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .panel {
-      background: rgba(17,24,39,0.82);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 20px;
-    }
-    .panel h2 { margin: 0 0 12px; color: var(--gold); font-size: 1.2rem; }
-    ul { margin: 0; padding-left: 18px; color: var(--muted); }
-    li + li { margin-top: 8px; }
-    .domain-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .domain {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: var(--muted);
-    }
-    .domain strong { color: var(--text); }
-    .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(139,92,246,0.15);
-      color: var(--bzpz);
-      border: 1px solid rgba(139,92,246,0.5);
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    @media (max-width: 760px) { .grid, .domain-list { grid-template-columns: 1fr; } }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">Whole Donuts</div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Index</a>
-        <a href="ecosystem.html">Ecosystem</a>
-        <a href="identity-law.html">Identity Law</a>
-        <a href="story.html">Story</a>
-        <a href="donor.html">Donor</a>
-      </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Whole Donuts ecosystem overview, domains, and service-map." />
+    <title>Whole Donuts Ecosystem</title>
+    <style>
+      :root {
+        --bg: #090d14;
+        --bg-2: #111827;
+        --panel: rgba(15, 23, 42, 0.78);
+        --line: rgba(255,255,255,0.08);
+        --text: #f8fafc;
+        --muted: #d4d9e3;
+        --gold: #f5b942;
+        --violet: #8b5cf6;
+        --magenta: #ec4899;
+        --green: #34d399;
+      }
 
-    <main>
-      <div class="tag">Ecosystem</div>
-      <h1>Whole Donuts Ecosystem</h1>
-      <p class="lead">
-        The operating structure behind the movement: landing, identity, merch, and domain-routing nodes all work together as one network.
-        This is the map that turns the mission into a system.
-      </p>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, var(--bg), var(--bg-2));
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
 
-      <div class="grid">
-        <section class="panel">
-          <h2>Service Architecture</h2>
-          <ul>
-            <li><strong>Landing</strong> — wenevergonnaclose.com as the gateway and first impression.</li>
-            <li><strong>Whole Donuts</strong> — wholedonuts.org, .app, .me, .pro, .buzz.</li>
-            <li><strong>Merch</strong> — wholedonuts.store and thenutur3dchef.com for commerce and support.</li>
-            <li><strong>Nurtured Chef</strong> — thenurturedchef.com and .foundation.</li>
-          </ul>
-        </section>
+      a { color: inherit; text-decoration: none; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 80px; }
 
-        <section class="panel">
-          <h2>System Logic</h2>
-          <ul>
-            <li>Origin starts at the landing page and routes by domain identity.</li>
-            <li>Service detection maps hostnames to the correct operational lane.</li>
-            <li>Domain routing ensures each section behaves as part of a unified movement.</li>
-          </ul>
-        </section>
-      </div>
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 14px 0 22px;
+        border-bottom: 1px solid var(--line);
+        flex-wrap: wrap;
+      }
 
-      <div class="domain-list" aria-label="Active domains">
-        <div class="domain"><strong>wenevergonnaclose.com</strong><br>Entry gateway</div>
-        <div class="domain"><strong>wholedonuts.org</strong><br>Main Whole Donuts node</div>
-        <div class="domain"><strong>wholedonuts.app</strong><br>App / product layer</div>
-        <div class="domain"><strong>wholedonuts.me</strong><br>Community layer</div>
-        <div class="domain"><strong>wholedonuts.pro</strong><br>Professional layer</div>
-        <div class="domain"><strong>wholedonuts.buzz</strong><br>Story and reach layer</div>
-        <div class="domain"><strong>wholedonuts.store</strong><br>Merch storefront</div>
-        <div class="domain"><strong>thenurturedchef.com</strong><br>Main Nurtured Chef node</div>
-        <div class="domain"><strong>thenurturedchef.foundation</strong><br>Foundation layer</div>
-        <div class="domain"><strong>thenutur3dchef.com</strong><br>Merch / commerce layer</div>
-      </div>
-    </main>
-  </div>
-</body>
+      .brand {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: var(--gold);
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: var(--muted);
+      }
+
+      .nav a:hover { color: var(--text); }
+
+      .tag {
+        display: inline-block;
+        margin-top: 28px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(139, 92, 246, 0.12);
+        border: 1px solid rgba(139, 92, 246, 0.45);
+        color: var(--violet);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(2.8rem, 5vw, 4.4rem);
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .lead {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .grid {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+
+      .panel h2 {
+        margin: 0 0 14px;
+        font-size: 1.2rem;
+        color: var(--gold);
+      }
+
+      .panel ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      li + li { margin-top: 8px; }
+
+      .domain-list {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .domain {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px 16px;
+      }
+
+      .domain strong {
+        display: block;
+        font-size: 1rem;
+        color: var(--text);
+      }
+
+      .domain span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 760px) {
+        .grid, .domain-list { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="topbar">
+        <div class="brand">Whole Donuts</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Index</a>
+          <a href="ecosystem.html">Ecosystem</a>
+          <a href="identity-law.html">Identity Law</a>
+          <a href="story.html">Story</a>
+          <a href="donor.html">Donor</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="tag">Ecosystem</div>
+        <h1>Whole Donuts Ecosystem</h1>
+        <p class="lead">
+          The movement is built as a layered system: landing, commerce, domains, service logic, and identity all work together to produce continuity.
+          This is the architecture that turns the story into a live operating network.
+        </p>
+
+        <div class="grid">
+          <section class="panel">
+            <h2>Service Structure</h2>
+            <ul>
+              <li><strong>Landing</strong> — the public entry point and first impression.</li>
+              <li><strong>Whole Donuts</strong> — the main brand and ecosystem lanes.</li>
+              <li><strong>Merch</strong> — commerce and support flows tied to the movement.</li>
+              <li><strong>Nurtured Chef</strong> — parallel identity layer with its own domain structure.</li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2>System Logic</h2>
+            <ul>
+              <li>Every site entrymaps to the correct domain identity.</li>
+              <li>Each ecosystem lane keeps its brand integrity without fragmenting the mission.</li>
+              <li>Back-end routing and public signaling align through the same central narrative.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="domain-list" aria-label="Ecosystem domains">
+          <div class="domain"><strong>wenevergonnaclose.com</strong><span>Primary gateway</span></div>
+          <div class="domain"><strong>wholedonuts.org</strong><span>Main Whole Donuts node</span></div>
+          <div class="domain"><strong>wholedonuts.app</strong><span>App / product layer</span></div>
+          <div class="domain"><strong>wholedonuts.me</strong><span>Community layer</span></div>
+          <div class="domain"><strong>wholedonuts.pro</strong><span>Professional layer</span></div>
+          <div class="domain"><strong>wholedonuts.buzz</strong><span>Story and reach layer</span></div>
+          <div class="domain"><strong>wholedonuts.store</strong><span>Merch storefront</span></div>
+          <div class="domain"><strong>thenurturedchef.com</strong><span>Chef main identity</span></div>
+          <div class="domain"><strong>thenurturedchef.foundation</strong><span>Foundation layer</span></div>
+          <div class="domain"><strong>thenutur3dchef.com</strong><span>Commerce layer</span></div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
