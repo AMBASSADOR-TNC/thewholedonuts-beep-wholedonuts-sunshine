@@ -1,30 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Nurtured Chef</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wenevergonnaclose — Universal Gateway</title>
+  <meta name="description" content="Universal entry protocol for Whole Donuts and The Nurtured Chef." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="gateway-body">
+  <div id="app" class="app-shell">
+    <div id="stage-1" class="stage active">
+      <div class="panel">
+        <p class="eyebrow">PHASE 1</p>
+        <h1>Choose the figure closest to you</h1>
+        <div class="figure-grid">
+          <button class="figure-card" data-figure="adult-man">
+            <span class="figure-icon">🧍</span>
+            <span>Adult Man</span>
+          </button>
+          <button class="figure-card" data-figure="adult-woman">
+            <span class="figure-icon">🧍‍♀️</span>
+            <span>Adult Woman</span>
+          </button>
+          <button class="figure-card" data-figure="youth-boy">
+            <span class="figure-icon">🧒</span>
+            <span>Youth Boy</span>
+          </button>
+          <button class="figure-card" data-figure="youth-girl">
+            <span class="figure-icon">👧</span>
+            <span>Youth Girl</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
-<body>
+    <div id="stage-2" class="stage">
+      <div class="panel">
+        <p class="eyebrow">PHASE 2</p>
+        <h2>Select the emotion closest to you right now</h2>
+        <div class="emotion-grid">
+          <button class="emotion-card" data-emotion="curious">🔍 Curious</button>
+          <button class="emotion-card" data-emotion="brave">💪 Brave</button>
+          <button class="emotion-card" data-emotion="heard">👂 Heard</button>
+          <button class="emotion-card" data-emotion="growing">🌱 Growing</button>
+          <button class="emotion-card" data-emotion="connected">🔗 Connected</button>
+          <button class="emotion-card" data-emotion="inspired">✨ Inspired</button>
+          <button class="emotion-card" data-emotion="hopeful">🌤 Hopeful</button>
+          <button class="emotion-card" data-emotion="tired">😴 Tired</button>
+          <button class="emotion-card" data-emotion="confused">❓ Confused</button>
+          <button class="emotion-card" data-emotion="strong">🛡 Strong</button>
+          <button class="emotion-card" data-emotion="quiet">🤫 Quiet</button>
+          <button class="emotion-card" data-emotion="curious2">🧭 Aware</button>
+          <button class="emotion-card" data-emotion="hopeful2">🌙 Ready</button>
+          <button class="emotion-card" data-emotion="open">💬 Open</button>
+        </div>
+      </div>
+    </div>
 
-  <header class="fade">
-    <h1>The Nurtured Chef</h1>
-    <p>Healing the world through food, identity, and purpose.</p>
-  </header>
+    <div id="stage-3" class="stage">
+      <div class="panel">
+        <p class="eyebrow">PHASE 3</p>
+        <h2>Where are you aiming right now?</h2>
+        <div class="aspiration-grid">
+          <button class="aspiration-card" data-level="stay">Stay</button>
+          <button class="aspiration-card" data-level="root">Root</button>
+          <button class="aspiration-card" data-level="grow">Grow</button>
+          <button class="aspiration-card" data-level="climb">Climb</button>
+          <button class="aspiration-card" data-level="peak">Peak</button>
+          <button class="aspiration-card" data-level="sky">Sky</button>
+          <button class="aspiration-card" data-level="moon">Moon</button>
+        </div>
+      </div>
+    </div>
 
-  <section class="fade">
-    <p>This is your true entry point — the one that replaced the old wenevergonnaclose.com page. All launch cards, identity sequences, and motion layers will load from here.</p>
-  </section>
+    <div id="stage-4" class="stage black-stage">
+      <div class="panel black-panel">
+        <p class="eyebrow light">PHASE 4</p>
+        <h1>GRADUATION YEAR?</h1>
+        <input id="grad-year" type="number" min="2000" max="2100" placeholder="2028" />
+        <button id="submit-year" class="submit-button">Enter</button>
+      </div>
+    </div>
+  </div>
 
-  <nav class="fade">
-    <a href="ecosystem.html">Ecosystem</a>
-    <a href="identity-law.html">Identity Law</a>
-    <a href="story.html">Identity Story</a>
-    <a href="donor.html">Donor Page</a>
-  </nav>
+  <script>
+    const state = {
+      figure: null,
+      emotion: null,
+      aspiration: null,
+      year: null
+    };
 
-  <script src="motion.js"></script>
+    const stageOne = document.getElementById('stage-1');
+    const stageTwo = document.getElementById('stage-2');
+    const stageThree = document.getElementById('stage-3');
+    const stageFour = document.getElementById('stage-4');
+    const input = document.getElementById('grad-year');
+    const submit = document.getElementById('submit-year');
+
+    document.querySelectorAll('.figure-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        state.figure = card.dataset.figure;
+        card.classList.add('selected');
+        setTimeout(() => {
+          stageOne.classList.remove('active');
+          stageTwo.classList.add('active');
+        }, 180);
+      });
+    });
+
+    document.querySelectorAll('.emotion-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        state.emotion = card.dataset.emotion;
+        card.classList.add('selected');
+        setTimeout(() => {
+          stageTwo.classList.remove('active');
+          stageThree.classList.add('active');
+        }, 180);
+      });
+    });
+
+    document.querySelectorAll('.aspiration-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        state.aspiration = card.dataset.level;
+        card.classList.add('selected');
+        setTimeout(() => {
+          stageThree.classList.remove('active');
+          stageFour.classList.add('active');
+          input.focus();
+        }, 180);
+      });
+    });
+
+    submit.addEventListener('click', () => {
+      const yearValue = parseInt(input.value, 10);
+      if (!yearValue || yearValue < 2000 || yearValue > 2100) {
+        input.focus();
+        input.style.borderColor = '#ff6b6b';
+        return;
+      }
+
+      state.year = yearValue;
+      const currentYear = new Date().getFullYear();
+      const route = yearValue <= currentYear ? 'https://justtryplususa.org' : 'https://justtryplususa.com';
+
+      sessionStorage.setItem('gateway-profile', JSON.stringify(state));
+      window.location.href = route;
+    });
+  </script>
 </body>
 </html>
