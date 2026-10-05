@@ -2,151 +2,278 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wenevergonnaclose — Universal Gateway</title>
-  <meta name="description" content="Universal entry protocol for Whole Donuts and The Nurtured Chef." />
-  <link rel="stylesheet" href="style.css" />
+  <title>WENEVERGONNACLOSE — +U Cauldron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .page {
+      max-width: 720px;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .symbol {
+      margin: 24px auto;
+      width: 160px;
+      height: 220px;
+      position: relative;
+    }
+    .figure-body {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      width: 4px;
+      height: 60px;
+      background: var(--white);
+      transform: translateX(-50%);
+    }
+    .figure-legs::before,
+    .figure-legs::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 4px;
+      height: 40px;
+      background: var(--white);
+    }
+    .figure-legs::before {
+      left: calc(50% - 14px);
+    }
+    .figure-legs::after {
+      left: calc(50% + 10px);
+    }
+    .figure-arms::before,
+    .figure-arms::after {
+      content: "";
+      position: absolute;
+      top: 40%;
+      width: 40px;
+      height: 4px;
+      background: var(--white);
+    }
+    .figure-arms::before {
+      left: calc(50% - 40px);
+    }
+    .figure-arms::after {
+      left: 50%;
+    }
+    .cauldron {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      width: 120px;
+      height: 70px;
+      background: var(--black);
+      border-radius: 0 0 60px 60px;
+      border: 4px solid var(--white);
+      transform: translateX(-50%);
+    }
+    .cauldron::before,
+    .cauldron::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      width: 28px;
+      height: 18px;
+      border: 4px solid var(--white);
+      border-radius: 18px;
+      background: var(--black);
+    }
+    .cauldron::before {
+      left: -24px;
+    }
+    .cauldron::after {
+      right: -24px;
+    }
+    .plus {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 32px;
+      height: 32px;
+      transform: translate(-50%, -50%);
+    }
+    .plus::before,
+    .plus::after {
+      content: "";
+      position: absolute;
+      background: var(--white);
+    }
+    .plus::before {
+      width: 100%;
+      height: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .plus::after {
+      width: 8px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .ghost-hands {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 140px;
+      height: 80px;
+      transform: translateX(-50%);
+      opacity: 0.25;
+    }
+    .ghost-hands::before,
+    .ghost-hands::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      border-radius: 30px;
+      border: 3px solid var(--white);
+    }
+    .ghost-hands::before {
+      left: 0;
+      top: 20px;
+    }
+    .ghost-hands::after {
+      right: 0;
+      top: 20px;
+    }
+    .ghost-plus {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+    }
+    .ghost-plus::before,
+    .ghost-plus::after {
+      content: "";
+      position: absolute;
+      background: var(--white);
+    }
+    .ghost-plus::before {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .ghost-plus::after {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .ghost-plus.p1 { top: 10px; left: 20px; }
+    .ghost-plus.p2 { top: 5px; left: 60px; }
+    .ghost-plus.p3 { top: 15px; left: 100px; }
+    .ghost-plus.p4 { top: 35px; left: 40px; }
+    .ghost-plus.p5 { top: 40px; left: 90px; }
+
+    .cta-row {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .cta {
+      border: 1px solid var(--white);
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .cta:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+    .small {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<body class="gateway-body">
-  <div id="app" class="app-shell">
-    <div id="stage-1" class="stage active">
-      <div class="panel">
-        <p class="eyebrow">PHASE 1</p>
-        <h1>Choose the figure closest to you</h1>
-        <div class="figure-grid">
-          <button class="figure-card" data-figure="adult-man">
-            <span class="figure-icon">🧍</span>
-            <span>Adult Man</span>
-          </button>
-          <button class="figure-card" data-figure="adult-woman">
-            <span class="figure-icon">🧍‍♀️</span>
-            <span>Adult Woman</span>
-          </button>
-          <button class="figure-card" data-figure="youth-boy">
-            <span class="figure-icon">🧒</span>
-            <span>Youth Boy</span>
-          </button>
-          <button class="figure-card" data-figure="youth-girl">
-            <span class="figure-icon">👧</span>
-            <span>Youth Girl</span>
-          </button>
-        </div>
+<body>
+  <div class="page">
+    <h1>WENEVERGONNACLOSE</h1>
+    <h2>10 seconds for a lifetime of tools for living “+U” positive</h2>
+
+    <p>
+      Learn from the mistakes and accomplishments of experienced members who came before —
+      but we need <strong>U</strong> to <strong>+</strong> to our ecosystem of growth.
+    </p>
+
+    <div class="symbol" aria-label="+U cauldron symbol">
+      <div class="ghost-hands">
+        <div class="ghost-plus p1"></div>
+        <div class="ghost-plus p2"></div>
+        <div class="ghost-plus p3"></div>
+        <div class="ghost-plus p4"></div>
+        <div class="ghost-plus p5"></div>
+      </div>
+      <div class="figure-body"></div>
+      <div class="figure-legs"></div>
+      <div class="figure-arms"></div>
+      <div class="cauldron">
+        <div class="plus"></div>
       </div>
     </div>
 
-    <div id="stage-2" class="stage">
-      <div class="panel">
-        <p class="eyebrow">PHASE 2</p>
-        <h2>Select the emotion closest to you right now</h2>
-        <div class="emotion-grid">
-          <button class="emotion-card" data-emotion="curious">🔍 Curious</button>
-          <button class="emotion-card" data-emotion="brave">💪 Brave</button>
-          <button class="emotion-card" data-emotion="heard">👂 Heard</button>
-          <button class="emotion-card" data-emotion="growing">🌱 Growing</button>
-          <button class="emotion-card" data-emotion="connected">🔗 Connected</button>
-          <button class="emotion-card" data-emotion="inspired">✨ Inspired</button>
-          <button class="emotion-card" data-emotion="hopeful">🌤 Hopeful</button>
-          <button class="emotion-card" data-emotion="tired">😴 Tired</button>
-          <button class="emotion-card" data-emotion="confused">❓ Confused</button>
-          <button class="emotion-card" data-emotion="strong">🛡 Strong</button>
-          <button class="emotion-card" data-emotion="quiet">🤫 Quiet</button>
-          <button class="emotion-card" data-emotion="curious2">🧭 Aware</button>
-          <button class="emotion-card" data-emotion="hopeful2">🌙 Ready</button>
-          <button class="emotion-card" data-emotion="open">💬 Open</button>
-        </div>
-      </div>
+    <p>
+      A simple stick figure holds a wide, U‑shaped black cauldron at chest height.
+      Inside, a glowing white <strong>+</strong> shows the pot is full of positivity.
+      The hands and handles form the “U” — made by you; for all.
+    </p>
+
+    <p>
+      Whole Donuts and +U are a human support movement — not medical, not clinical —
+      built to offer positivity, honesty, and connection while people navigate systems that feel impossible.
+    </p>
+
+    <p>
+      <strong>Overflow ethic:</strong><br />
+      Hold what you can. Share what overflows. Offer what helps. Protect the next.
+    </p>
+
+    <div class="cta-row">
+      <a class="cta" href="https://wholedonuts.cloud" target="_blank" rel="noopener">Enter WHOLEDONUTS.CLOUD</a>
+      <a class="cta" href="https://cash.app/$WHOLEDONUTS" target="_blank" rel="noopener">Support via Cash App</a>
+      <a class="cta" href="https://chime.com" target="_blank" rel="noopener">Support via Chime (WHOLEDONUTS)</a>
+      <a class="cta" href="https://gofundme.com" target="_blank" rel="noopener">View GoFundMe</a>
     </div>
 
-    <div id="stage-3" class="stage">
-      <div class="panel">
-        <p class="eyebrow">PHASE 3</p>
-        <h2>Where are you aiming right now?</h2>
-        <div class="aspiration-grid">
-          <button class="aspiration-card" data-level="stay">Stay</button>
-          <button class="aspiration-card" data-level="root">Root</button>
-          <button class="aspiration-card" data-level="grow">Grow</button>
-          <button class="aspiration-card" data-level="climb">Climb</button>
-          <button class="aspiration-card" data-level="peak">Peak</button>
-          <button class="aspiration-card" data-level="sky">Sky</button>
-          <button class="aspiration-card" data-level="moon">Moon</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="stage-4" class="stage black-stage">
-      <div class="panel black-panel">
-        <p class="eyebrow light">PHASE 4</p>
-        <h1>GRADUATION YEAR?</h1>
-        <input id="grad-year" type="number" min="2000" max="2100" placeholder="2028" />
-        <button id="submit-year" class="submit-button">Enter</button>
-      </div>
-    </div>
+    <p class="small">
+      Come with nothing. Stay as long as you choose. Leave only when you decide.<br />
+      WENEVERGONNACLOSE — ALL WAYS, ALWAYS.
+    </p>
   </div>
-
-  <script>
-    const state = {
-      figure: null,
-      emotion: null,
-      aspiration: null,
-      year: null
-    };
-
-    const stageOne = document.getElementById('stage-1');
-    const stageTwo = document.getElementById('stage-2');
-    const stageThree = document.getElementById('stage-3');
-    const stageFour = document.getElementById('stage-4');
-    const input = document.getElementById('grad-year');
-    const submit = document.getElementById('submit-year');
-
-    document.querySelectorAll('.figure-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        state.figure = card.dataset.figure;
-        card.classList.add('selected');
-        setTimeout(() => {
-          stageOne.classList.remove('active');
-          stageTwo.classList.add('active');
-        }, 180);
-      });
-    });
-
-    document.querySelectorAll('.emotion-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        state.emotion = card.dataset.emotion;
-        card.classList.add('selected');
-        setTimeout(() => {
-          stageTwo.classList.remove('active');
-          stageThree.classList.add('active');
-        }, 180);
-      });
-    });
-
-    document.querySelectorAll('.aspiration-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        state.aspiration = card.dataset.level;
-        card.classList.add('selected');
-        setTimeout(() => {
-          stageThree.classList.remove('active');
-          stageFour.classList.add('active');
-          input.focus();
-        }, 180);
-      });
-    });
-
-    submit.addEventListener('click', () => {
-      const yearValue = parseInt(input.value, 10);
-      if (!yearValue || yearValue < 2000 || yearValue > 2100) {
-        input.focus();
-        input.style.borderColor = '#ff6b6b';
-        return;
-      }
-
-      state.year = yearValue;
-      const currentYear = new Date().getFullYear();
-      const route = yearValue <= currentYear ? 'https://justtryplususa.org' : 'https://justtryplususa.com';
-
-      sessionStorage.setItem('gateway-profile', JSON.stringify(state));
-      window.location.href = route;
-    });
-  </script>
 </body>
 </html>
