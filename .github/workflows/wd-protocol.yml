@@ -33,8 +33,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh label create bathroom-door-blocker --color D93F0B --description "Bathroom Door operational blocker" --force
-          gh label create bathroom-door-archive --color 6A737D --description "Bathroom Door archived operational item" --force
+          gh label create bathroom-door-blocker --repo "$GITHUB_REPOSITORY" --color D93F0B --description "Bathroom Door operational blocker" --force
+          gh label create bathroom-door-archive --repo "$GITHUB_REPOSITORY" --color 6A737D --description "Bathroom Door archived operational item" --force
 
   archive-labeled-issue:
     if: github.event_name == 'issues' && github.event.label.name == 'bathroom-door-blocker'
