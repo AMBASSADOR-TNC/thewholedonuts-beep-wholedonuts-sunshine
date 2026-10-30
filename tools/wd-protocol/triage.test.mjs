@@ -21,6 +21,7 @@ await writeFile(path.join(inputDirectory, "blocked-record.json"), JSON.stringify
   kind: "learning",
   title: "Test blocker",
   createdAt: "2026-10-30T00:00:00.000Z",
+  availability: "missing",
   status: "blocked",
   blocker: "Test confirms automatic archival"
 }));
@@ -34,5 +35,7 @@ assert.equal(result.status, 0, result.stderr);
 assert.match(result.stdout, /Archived blocked-record/);
 const archived = JSON.parse(await readFile(path.join(archiveDirectory, "blocked-record.json"), "utf8"));
 assert.equal(archived.status, "blocked");
+assert.equal(archived.availability, "missing");
 const ledger = await readFile(path.join(fixtureRoot, "WD.ARCHIVE", "ledger.jsonl"), "utf8");
 assert.match(ledger, /"id":"blocked-record"/);
+assert.match(ledger, /"availability":"missing"/);

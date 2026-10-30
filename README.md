@@ -41,7 +41,9 @@ Bathroom Door uses `WD.INPUT/`, `WD.OUTPUT/`, and `WD.ARCHIVE/` to keep structur
 reviewed results, and explicit blockers separate. The dependency-free triage
 tool archives only records that are explicitly marked blocked with a factual
 reason, preserves an append-only count in `WD.ARCHIVE/ledger.jsonl`, and never
-copies untrusted issue text or private material. See
+copies untrusted issue text or private material. Only verified material moves
+forward; missing or unverified material is blocked and recorded in Bathroom
+Door. See
 [docs/WD_PROTOCOL.md](docs/WD_PROTOCOL.md).
 
 All public brand domains resolve through `backend/router/config/domains.yaml`.

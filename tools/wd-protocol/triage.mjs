@@ -9,6 +9,7 @@ const ledgerPath = path.join(root, "WD.ARCHIVE", "ledger.jsonl");
 const dryRun = process.argv.includes("--check");
 const allowedKinds = new Set(["file", "issue", "request", "learning"]);
 const allowedStatuses = new Set(["ready", "in_progress", "blocked", "complete"]);
+const allowedAvailability = new Set(["verified", "missing", "unverified"]);
 
 function assertManifest(manifest, fileName) {
   if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) {
@@ -31,12 +32,20 @@ function assertManifest(manifest, fileName) {
     throw new Error(`${fileName}: createdAt must be an ISO timestamp`);
   }
 
+  if (!allowedAvailability.has(manifest.availability)) {
+    throw new Error(`${fileName}: availability must be verified, missing, or unverified`);
+  }
+
   if (!allowedStatuses.has(manifest.status)) {
     throw new Error(`${fileName}: status is invalid`);
   }
 
   if (manifest.status === "blocked" && (typeof manifest.blocker !== "string" || !manifest.blocker.trim())) {
     throw new Error(`${fileName}: blocked records require a blocker`);
+  }
+
+  if (manifest.availability !== "verified" && manifest.status !== "blocked") {
+    throw new Error(`${fileName}: missing or unverified records must be blocked`);
   }
 }
 
@@ -97,6 +106,7 @@ async function archiveBlockedRecords() {
       archivedAt: new Date().toISOString(),
       id: manifest.id,
       kind: manifest.kind,
+      availability: manifest.availability,
       blocker: manifest.blocker.trim(),
       record: path.relative(root, destination).replaceAll(path.sep, "/")
     }));

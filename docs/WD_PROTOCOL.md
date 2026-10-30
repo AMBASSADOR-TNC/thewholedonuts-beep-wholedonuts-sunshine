@@ -15,10 +15,16 @@ An input manifest is automatically archived when, and only when, it has:
 
 ```json
 {
+  "availability": "missing",
   "status": "blocked",
   "blocker": "A specific, factual reason work cannot continue"
 }
 ```
+
+`availability: "verified"` is required before an item can move forward as
+active work. `missing` and `unverified` are not failures to hide: they must use
+the blocked form above so Bathroom Door preserves their reason, count, and
+source metadata without letting them slow active programs.
 
 Run the following command locally or in automation:
 
