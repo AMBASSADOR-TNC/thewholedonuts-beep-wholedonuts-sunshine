@@ -39,9 +39,30 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD wget -qO- http://localhost:3001/health || exit 1
 CMD ["node", "src/server.js"]
 
-# ── Stage 4: public site (nginx) ─────────────────────────────
+# ── Stage 4: assemble canonical site + curated archive ───────
+FROM alpine:3.20 AS public-site-builder
+WORKDIR /src
+COPY apps/public-site/ ./apps/public-site/
+COPY brain/ ./brain/
+COPY counter-estore/ ./counter-estore/
+COPY counter-foundation/ ./counter-foundation/
+COPY counter/ ./counter/
+COPY dashboard/ ./dashboard/
+COPY effort/ ./effort/
+COPY entry/ ./entry/
+COPY movement-engine/ ./movement-engine/
+COPY protocol-engine/ ./protocol-engine/
+COPY table-estore/ ./table-estore/
+COPY table-systems/ ./table-systems/
+COPY table/ ./table/
+COPY vault/ ./vault/
+COPY description-28.csv donor.html ecosystem.html identity-law.html motion.js pol-cin.html pol-mot.html story.html style.css ./
+COPY scripts/prepare-public-site.sh ./scripts/prepare-public-site.sh
+RUN sh scripts/prepare-public-site.sh /site
+
+# ── Stage 5: public site (nginx) ─────────────────────────────
 FROM nginx:1.27-alpine AS public-site
-COPY apps/public-site/ /usr/share/nginx/html/
+COPY --from=public-site-builder /site/ /usr/share/nginx/html/
 COPY apps/web/ /usr/share/nginx/html/landing/
 COPY --from=merch-web-builder /build/merch/web/.next/static /usr/share/nginx/html/merch/_next/static
 COPY infra/docker/nginx.conf /etc/nginx/conf.d/default.conf

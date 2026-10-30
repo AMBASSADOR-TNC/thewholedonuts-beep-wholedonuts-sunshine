@@ -94,8 +94,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble public site
+        run: sh scripts/prepare-public-site.sh _site
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/public-site
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

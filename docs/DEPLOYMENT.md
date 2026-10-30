@@ -18,7 +18,7 @@ This document describes how to deploy the full Whole Donuts ecosystem.
 
 ```bash
 # 1. Clone and configure
-git clone https://github.com/thewholedonuts-beep/wholedonuts-sunshine
+git clone https://github.com/AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine
 cd wholedonuts-sunshine
 cp .env.example .env
 # Edit .env with your real credentials

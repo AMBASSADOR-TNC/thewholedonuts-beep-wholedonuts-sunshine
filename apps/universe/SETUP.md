@@ -12,7 +12,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/thewholedonuts-beep/wholedonuts-sunshine.git
+git clone https://github.com/AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine.git
 cd wholedonuts-sunshine/apps/universe
 
 # Setup environment

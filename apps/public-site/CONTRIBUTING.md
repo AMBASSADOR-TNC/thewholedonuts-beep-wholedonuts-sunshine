@@ -5,7 +5,7 @@ Whole Donuts welcomes original stick figures, accessible improvements, useful te
 ## Two ways in
 
 1. **Leave a crumb:** Use the reviewed submission form at [wenevergonnaclose.com/#make](https://wenevergonnaclose.com/#make). This is the easiest route for an idea, link, or short contribution.
-2. **Open a pull request:** Fork the repository, make a focused change under `apps/public-site/`, and open a pull request explaining what the contribution adds.
+2. **Open a pull request:** Fork [`AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine`](https://github.com/AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine), make a focused change under `apps/public-site/`, and open a pull request explaining what the contribution adds.
 
 ## Stick-figure contributions
 
