@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, rename, stat, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, open, readFile, readdir, rename, stat } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
@@ -74,6 +74,59 @@ async function loadManifests() {
   return manifests;
 }
 
+async function preflightArchive(blocked) {
+  await mkdir(archiveDirectory, { recursive: true });
+
+  for (const { fileName } of blocked) {
+    const destination = path.join(archiveDirectory, fileName);
+
+    try {
+      await stat(destination);
+      throw new Error(`${fileName}: archive destination already exists`);
+    } catch (error) {
+      if (error.code !== "ENOENT") {
+        throw error;
+      }
+    }
+  }
+
+  const ledger = await open(ledgerPath, "a");
+  await ledger.close();
+}
+
+function archiveEvent(manifest, destination) {
+  return JSON.stringify({
+    archivedAt: new Date().toISOString(),
+    id: manifest.id,
+    kind: manifest.kind,
+    availability: manifest.availability,
+    blocker: manifest.blocker.trim(),
+    record: path.relative(root, destination).replaceAll(path.sep, "/")
+  });
+}
+
+async function archiveRecord({ filePath, fileName, manifest }) {
+  const destination = path.join(archiveDirectory, fileName);
+  await rename(filePath, destination);
+
+  try {
+    await appendFile(ledgerPath, `${archiveEvent(manifest, destination)}\n`);
+  } catch (error) {
+    try {
+      await rename(destination, filePath);
+    } catch (rollbackError) {
+      throw new AggregateError(
+        [error, rollbackError],
+        `${fileName}: ledger append failed and the record could not be restored`
+      );
+    }
+
+    throw new Error(`${fileName}: ledger append failed; the record was restored`, { cause: error });
+  }
+
+  console.log(`Archived ${manifest.id}`);
+}
+
 async function archiveBlockedRecords() {
   const manifests = await loadManifests();
   const blocked = manifests.filter(({ manifest }) => manifest.status === "blocked");
@@ -86,35 +139,10 @@ async function archiveBlockedRecords() {
     return;
   }
 
-  await mkdir(archiveDirectory, { recursive: true });
-  const events = [];
+  await preflightArchive(blocked);
 
-  for (const { filePath, fileName, manifest } of blocked) {
-    const destination = path.join(archiveDirectory, fileName);
-
-    try {
-      await stat(destination);
-      throw new Error(`${fileName}: archive destination already exists`);
-    } catch (error) {
-      if (error.code !== "ENOENT") {
-        throw error;
-      }
-    }
-
-    await rename(filePath, destination);
-    events.push(JSON.stringify({
-      archivedAt: new Date().toISOString(),
-      id: manifest.id,
-      kind: manifest.kind,
-      availability: manifest.availability,
-      blocker: manifest.blocker.trim(),
-      record: path.relative(root, destination).replaceAll(path.sep, "/")
-    }));
-    console.log(`Archived ${manifest.id}`);
-  }
-
-  if (events.length > 0) {
-    await writeFile(ledgerPath, `${events.join("\n")}\n`, { flag: "a" });
+  for (const record of blocked) {
+    await archiveRecord(record);
   }
 
   console.log(`Checked ${manifests.length} manifest(s); archived ${blocked.length}.`);

@@ -32,9 +32,18 @@ Run the following command locally or in automation:
 node tools/wd-protocol/triage.mjs
 ```
 
-The command validates every candidate before moving it. It rejects malformed
-manifests, duplicate IDs, and a blocked record without a reason. `--check`
+Before moving anything, the command validates every candidate, checks every
+archive destination, and verifies that the ledger can be opened for appending.
+It rejects malformed manifests, duplicate IDs, a blocked record without a
+reason, and archive-name collisions. After each successful move, it appends
+that record's event immediately to the ledger. If appending that event fails,
+the command attempts to restore that current record and then stops. `--check`
 reports the archive plan without writing it.
+
+This is deliberate failure handling, not crash-atomic storage. An operating
+system or filesystem failure can still interrupt a process between a move and
+its ledger append; recover such an interruption through a human review of the
+record and ledger rather than assuming an automated repair occurred.
 
 The GitHub workflow separately treats an issue carrying
 `bathroom-door-blocker` as an archived operational item by applying
