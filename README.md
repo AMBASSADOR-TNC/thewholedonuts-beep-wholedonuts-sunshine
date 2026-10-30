@@ -35,6 +35,15 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full layout details,
 [docs/API.md](docs/API.md) for API documentation, and
 [docs/CUTOVER.md](docs/CUTOVER.md) for external launch requirements.
 
+## Bathroom Door protocol
+
+Bathroom Door uses `WD.INPUT/`, `WD.OUTPUT/`, and `WD.ARCHIVE/` to keep structured work records,
+reviewed results, and explicit blockers separate. The dependency-free triage
+tool archives only records that are explicitly marked blocked with a factual
+reason, preserves an append-only count in `WD.ARCHIVE/ledger.jsonl`, and never
+copies untrusted issue text or private material. See
+[docs/WD_PROTOCOL.md](docs/WD_PROTOCOL.md).
+
 All public brand domains resolve through `backend/router/config/domains.yaml`.
 Until their dedicated applications are live, the router sends browser traffic back
 to the matching Whole Donuts or Nurtured Chef section of the canonical entry.
