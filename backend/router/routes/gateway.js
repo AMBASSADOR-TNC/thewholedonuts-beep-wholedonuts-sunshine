@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * routes/gateway.js — Landing / wenevergonnaclose.com routes.
+ * routes/gateway.js — Legacy gateway requests return to the canonical Universe.
  */
 
-const path   = require('path');
 const express = require('express');
+const path = require('path');
 
 const router = express.Router();
 const LANDING_DIR = path.join(__dirname, '..', '..', '..', 'apps', 'public-site');

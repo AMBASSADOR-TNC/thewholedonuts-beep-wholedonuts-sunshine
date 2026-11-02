@@ -1,6 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fdf6ec;
+  --color-brand-100: #f9e2c5;
+  --color-brand-200: #f4ca99;
+  --color-brand-300: #eeb16d;
+  --color-brand-400: #e79a48;
+  --color-brand-500: #d97e21;
+  --color-brand-600: #ad6419;
+  --color-brand-700: #814912;
+  --color-brand-800: #55300b;
+  --color-brand-900: #2b1805;
+  --shadow-card: 0 20px 45px -25px rgba(15, 23, 42, 0.35);
+}
 
 :root {
   color-scheme: light;

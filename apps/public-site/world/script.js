@@ -17,6 +17,7 @@ const shareStatus = document.getElementById("shareStatus");
 const pageShell = document.querySelector(".page-shell");
 
 const storageKey = "whole-donuts-landing-state";
+let memoryState = null;
 const fieldFigures = [
   { x: 6, y: 50, scale: 1, tilt: "-4deg", pose: "open" },
   { x: 14, y: 26, scale: 0.88, tilt: "2deg", pose: "signal" },
@@ -103,7 +104,12 @@ function renderCustomFigure(state) {
 }
 
 function saveState(state) {
-  localStorage.setItem(storageKey, JSON.stringify(state));
+  memoryState = state;
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  } catch {
+    // Customization remains in memory when browser storage is unavailable.
+  }
 }
 
 function applyUrlState(state) {
@@ -134,9 +140,9 @@ function readState() {
   const fallback = { completed: false, pose: "open", accent: "#ffb95e", creation: "" };
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey));
-    return applyUrlState({ ...fallback, ...saved });
+    return applyUrlState({ ...fallback, ...memoryState, ...saved });
   } catch {
-    return applyUrlState(fallback);
+    return applyUrlState({ ...fallback, ...memoryState });
   }
 }
 
@@ -188,10 +194,24 @@ async function copyInvitation() {
   const state = readState();
   const invitation = `${shareText(state)} ${buildShareUrl(state)}`;
   try {
+    if (!navigator.clipboard?.writeText) {
+      throw new Error("Clipboard API unavailable");
+    }
     await navigator.clipboard.writeText(invitation);
     shareStatus.textContent = "Invitation copied. Pass it to one person or community where it belongs.";
   } catch {
-    shareStatus.textContent = "Copy was blocked by this browser. Use the Share button instead.";
+    const copyField = document.createElement("textarea");
+    copyField.value = invitation;
+    copyField.setAttribute("readonly", "");
+    copyField.style.position = "fixed";
+    copyField.style.opacity = "0";
+    document.body.appendChild(copyField);
+    copyField.select();
+    const copied = document.execCommand("copy");
+    copyField.remove();
+    shareStatus.textContent = copied
+      ? "Invitation copied. Pass it to one person or community where it belongs."
+      : "Copy was blocked. Select the page address from your browser to share it.";
   }
 }
 
@@ -223,6 +243,7 @@ function completeJourney() {
   state.completed = true;
   saveState(state);
   applyState(state);
+  unlockState.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 enterButton.addEventListener("click", completeJourney);

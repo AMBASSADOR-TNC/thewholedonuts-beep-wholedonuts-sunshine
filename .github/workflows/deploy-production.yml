@@ -1,4 +1,4 @@
-name: Deploy to production (wenevergonnaclose.com)
+name: Validate and deploy public site
 
 on:
   push:
@@ -44,10 +44,6 @@ jobs:
         with:
           node-version: 22
       - run: |
-          node --check apps/public-site/app.js
-          node --check apps/public-site/auth-config.js
-          node --check apps/public-site/auth.js
-          node --check apps/public-site/storefront-config.js
           node --check apps/public-site/world/script.js
 
   test-universe:
@@ -59,7 +55,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.27'
           cache-dependency-path: apps/universe/go.sum
       - run: go build ./...
       - run: go test ./...
@@ -73,10 +69,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version: '1.27'
           cache-dependency-path: tools/domain-funnels/go.sum
       - run: go test ./...
-
   # ── Deploy public site to GitHub Pages ─────────────────────
   deploy-pages:
     needs: [test-merch, test-public-site, test-universe, test-domain-funnels]

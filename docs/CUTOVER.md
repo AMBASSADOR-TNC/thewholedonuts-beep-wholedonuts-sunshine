@@ -4,18 +4,18 @@ This repository is ready for review and does not perform a live deployment.
 
 ## GitHub Pages
 
-After merging, enable GitHub Pages in the repository settings with **GitHub Actions**
-as the source. The Pages workflow uploads `apps/public-site/`, so its `CNAME` is part
-of the deployed artifact. Verify the custom domain and HTTPS status in GitHub before
-making the required DNS change at the domain provider. Do not redirect or retire the
-existing site until the new Pages URL is confirmed.
+GitHub Pages is enabled with **GitHub Actions** as the source. The production
+workflow assembles `apps/public-site/` with the curated ecosystem archive by running
+`scripts/prepare-public-site.sh`. Domain DNS changes remain an external owner action;
+do not add a `CNAME` until the intended production hostname and rollback path are
+confirmed.
 
-## Supabase and public-site auth
+## Public-site privacy
 
-Create or select the Supabase project, apply the tracked migrations in
-`apps/public-site/supabase/migrations/`, configure allowed redirect URLs for the
-final Pages domain, and place only the intended public client configuration in the
-public-site configuration template. Keep service-role keys out of this repository.
+The public site does not use Supabase, accounts, forms, analytics, or a contribution
+queue. Do not configure a client key or tracking service for it. If a prior deployment
+used a Supabase project, revoke its keys, disable public authentication, and delete or
+secure collected data before relaunching.
 
 ## Merch services
 
