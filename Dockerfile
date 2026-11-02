@@ -4,7 +4,7 @@
 # ────────────────────────────────────────────────────────────
 
 # ── Stage 1: build merch frontend ────────────────────────────
-FROM node:20-alpine AS merch-web-builder
+FROM node:22-alpine AS merch-web-builder
 WORKDIR /build/merch/web
 COPY apps/merch/web/package*.json ./
 RUN npm ci --prefer-offline
@@ -12,7 +12,7 @@ COPY apps/merch/web/ ./
 RUN npm run build
 
 # ── Stage 2: Go tools (domain-funnels + universe CLIs) ───────
-FROM golang:1.22-alpine AS go-builder
+FROM golang:1.27-alpine AS go-builder
 WORKDIR /build
 
 # domain-funnels
@@ -28,7 +28,7 @@ RUN cd universe && \
     go build -o /bin/scaling-orchestrator ./cmd/scaling-orchestrator
 
 # ── Stage 3: merch API (production) ──────────────────────────
-FROM node:20-alpine AS merch-api
+FROM node:22-alpine AS merch-api
 WORKDIR /app
 ENV NODE_ENV=production
 COPY apps/merch/api/package*.json ./

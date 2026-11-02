@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const CryptoJS = require('crypto-js');
 const { query } = require('../config/database');
 
 function sanitizeSponsorCodeSegment(value) {
@@ -17,7 +16,12 @@ function calculateChecksum(payload) {
 function buildReferralCode(sponsorIdentifier) {
   const normalizedId = sanitizeSponsorCodeSegment(String(sponsorIdentifier).toUpperCase());
   const timestamp = Date.now().toString(36).toUpperCase();
-  const hash = CryptoJS.SHA256(`${normalizedId}:${timestamp}`).toString().slice(0, 6).toUpperCase();
+  const hash = crypto
+    .createHash('sha256')
+    .update(`${normalizedId}:${timestamp}`)
+    .digest('hex')
+    .slice(0, 6)
+    .toUpperCase();
   const payload = `WD-${normalizedId}-${timestamp}-${hash}`;
   const checksum = calculateChecksum(payload);
   return `${payload}-${checksum}`;

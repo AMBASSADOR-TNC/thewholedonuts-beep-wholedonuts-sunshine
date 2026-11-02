@@ -194,10 +194,24 @@ async function copyInvitation() {
   const state = readState();
   const invitation = `${shareText(state)} ${buildShareUrl(state)}`;
   try {
+    if (!navigator.clipboard?.writeText) {
+      throw new Error("Clipboard API unavailable");
+    }
     await navigator.clipboard.writeText(invitation);
     shareStatus.textContent = "Invitation copied. Pass it to one person or community where it belongs.";
   } catch {
-    shareStatus.textContent = "Copy was blocked by this browser. Use the Share button instead.";
+    const copyField = document.createElement("textarea");
+    copyField.value = invitation;
+    copyField.setAttribute("readonly", "");
+    copyField.style.position = "fixed";
+    copyField.style.opacity = "0";
+    document.body.appendChild(copyField);
+    copyField.select();
+    const copied = document.execCommand("copy");
+    copyField.remove();
+    shareStatus.textContent = copied
+      ? "Invitation copied. Pass it to one person or community where it belongs."
+      : "Copy was blocked. Select the page address from your browser to share it.";
   }
 }
 
@@ -229,6 +243,7 @@ function completeJourney() {
   state.completed = true;
   saveState(state);
   applyState(state);
+  unlockState.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 enterButton.addEventListener("click", completeJourney);
