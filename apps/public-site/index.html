@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Whole Donuts — walk into the field, answer three questions, and find your seat at the table or the counter.">
+  <meta property="og:title" content="Whole Donuts | Make your figure">
+  <meta property="og:description" content="Make a stick figure, pass the invitation on, and bring a useful crumb to the table.">
+  <meta property="og:url" content="https://wenevergonnaclose.com/">
+  <meta property="og:type" content="website">
+  <title>Whole Donuts | Walk In</title>
+  <link rel="stylesheet" href="styles.css?v=entry1">
+</head>
+<body>
+  <section class="world-entry" aria-labelledby="world-entry-title">
+    <div class="world-entry-copy">
+      <p class="eyebrow">WHOLE DONUTS</p>
+      <h1 id="world-entry-title">Walk into the field.</h1>
+      <p>Choose your figure, step into the world, then answer three questions to find your seat.</p>
+    </div>
+    <iframe class="world-frame" src="world/" title="Whole Donuts interactive stick-figure world"></iframe>
+  </section>
+
+  <aside class="rail" aria-label="Whole Donuts menu">
+    <a class="mark" href="#home" aria-label="Home">+U</a>
+    <nav>
+      <a href="#make" data-branch="make"><span>MAKE</span><small>Pass it on</small></a>
+      <a href="#awd" data-branch="awd"><span>WHOLE</span><small>Whole Donuts</small></a>
+      <a href="#tnc" data-branch="tnc"><span>TNC</span><small>The Nurtured Chef</small></a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="home" class="panel hero" aria-labelledby="home-title">
+      <p class="eyebrow">THE COMMUNITY TABLE · <span id="daily-date">TODAY</span></p>
+      <h1 id="home-title">Pull up a seat.</h1>
+      <p class="lede">No judgment. No entrance fee. Just three questions, then your seat is ready.</p>
+
+      <section class="welcome-gate" id="welcome-gate" aria-labelledby="welcome-title">
+        <p class="eyebrow" id="welcome-progress">Question 1 of 3</p>
+        <h2 id="welcome-title">Three questions. Then your seat is ready.</h2>
+
+        <div class="welcome-step" data-question="1" data-key="age">
+          <p>How are you coming in today?</p>
+          <div class="answer-grid answer-grid--two">
+            <button type="button" data-answer="adult" data-dest="awd">
+              <span class="stick-inline happy" aria-hidden="true"></span>
+              I&rsquo;m an adult &mdash; take me to the Counter
+            </button>
+            <button type="button" data-answer="kid" data-dest="tnc">
+              <span class="stick-inline wave" aria-hidden="true"></span>
+              I&rsquo;m a kid &mdash; take me to the Table
+            </button>
+          </div>
+        </div>
+
+        <div class="welcome-step" data-question="2" data-key="feel" hidden>
+          <p>What would feel good today?</p>
+          <div class="answer-grid">
+            <button type="button" data-answer="learn">Learn something</button>
+            <button type="button" data-answer="make">Make something</button>
+            <button type="button" data-answer="help">Help something</button>
+            <button type="button" data-answer="wander">Just wander</button>
+          </div>
+        </div>
+
+        <div class="welcome-step" data-question="3" data-key="size" hidden>
+          <p>How big of a bite?</p>
+          <div class="answer-grid">
+            <button type="button" data-answer="bits">Just a bit</button>
+            <button type="button" data-answer="bites">Give me a plate</button>
+            <button type="button" data-answer="biggies">Bring the bib</button>
+            <button type="button" data-answer="bombs">Dessert first</button>
+          </div>
+        </div>
+
+        <div class="welcome-result" id="welcome-result" aria-live="polite" hidden>
+          <strong id="welcome-result-title">Your seat is ready.</strong>
+          <span id="welcome-result-copy">Welcome to +U.</span>
+          <div class="welcome-result-actions">
+            <a id="welcome-go" class="button primary" href="#awd">Go to your seat ↓</a>
+            <button type="button" id="restart-welcome">Ask me again</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="make" class="panel participation" aria-labelledby="make-title">
+      <p class="eyebrow">THE QUIET INVITATION</p>
+      <h2 id="make-title">Draw yourself in. Pass it on.</h2>
+      <p>Make a stick figure in the field, give your next positive project a name, and share one invitation. No spam, no hidden tracking, and no need to explain the whole thing.</p>
+      <div class="actions">
+        <a class="button primary" href="world/?completed=1">Make and share a figure</a>
+        <a class="button" href="ecosystem.html">Explore the ecosystem map</a>
+        <a class="button store" href="https://github.com/AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine/blob/main/apps/public-site/CONTRIBUTING.md">Build with us on GitHub ↗</a>
+      </div>
+
+      <section class="award-signin" id="award-signin" hidden aria-labelledby="award-signin-title">
+        <p class="eyebrow">MEMBER SIGN-IN</p>
+        <h3 id="award-signin-title">Your place is saved.</h3>
+        <p id="award-signin-copy">Enter your email to receive a private sign-in link and continue where you left off.</p>
+        <form id="award-signin-form">
+          <label for="award-email">Email address</label>
+          <div class="award-signin-actions">
+            <input id="award-email" name="email" type="email" autocomplete="email" required>
+            <button type="submit">Send my sign-in link</button>
+          </div>
+        </form>
+        <p id="award-signin-status" aria-live="polite"></p>
+      </section>
+
+      <section class="member-greeting" id="member-greeting" hidden aria-live="polite">
+        <strong id="member-greeting-title">Welcome back.</strong>
+        <span id="member-greeting-copy">Your place at the table is here when you are ready.</span>
+      </section>
+
+      <section class="crumb-workshop" aria-labelledby="crumb-workshop-title">
+        <p class="eyebrow">THE CRUMB WORKSHOP</p>
+        <h3 id="crumb-workshop-title">Bring something useful to the counter.</h3>
+        <p>Share an original lesson, design, resource, or project idea. Every crumb enters a private review queue before it can become part of the public experience.</p>
+        <form id="crumb-form">
+          <label for="crumb-category">Where could it help?</label>
+          <select id="crumb-category" name="category" required>
+            <option value="">Choose a place</option>
+            <option value="world">Stick-figure world</option>
+            <option value="library">+U Library</option>
+            <option value="ambassador">Ambassador Path</option>
+            <option value="support">Community support</option>
+          </select>
+          <label for="crumb-source">Source or project link, if there is one</label>
+          <input id="crumb-source" name="source" type="url" placeholder="https://example.com">
+          <label for="crumb-content">Your crumb</label>
+          <textarea id="crumb-content" name="content" rows="5" maxlength="2000" required placeholder="What is useful, who could it help, and how should someone begin?"></textarea>
+          <label class="crumb-consent"><input id="crumb-rights" name="rights" type="checkbox" required> I made this or have permission to share it.</label>
+          <button type="submit">Send this crumb for review</button>
+        </form>
+        <p id="crumb-status" aria-live="polite"></p>
+        <p class="crumb-note">Do not include private or harmful information. Read the <a href="CRUMB_PROTOCOL.md">crumb protocol</a>.</p>
+      </section>
+    </section>
+
+    <section id="awd" class="panel branch" aria-labelledby="awd-title">
+      <p class="eyebrow">WHOLE DONUTS · THE COUNTER</p>
+      <h2 id="awd-title">Every appetite belongs.</h2>
+      <p>Explore the Whole Donuts community, projects, and store. Come back to the entry whenever you want.</p>
+      <div class="actions">
+        <a class="button primary" href="https://cash.app/$wholedonuts">Support Whole Donuts ↗</a>
+        <a class="button store" href="mailto:thewholedonuts@gmail.com">Say hello</a>
+      </div>
+      <a class="back" href="#home">← Back to the entry</a>
+    </section>
+
+    <section id="tnc" class="panel branch" aria-labelledby="tnc-title">
+      <p class="eyebrow">THE NURTURED CHEF · THE TABLE</p>
+      <h2 id="tnc-title">Always treated by TNC.</h2>
+      <p>The Nurtured Chef — food, care, the foundation, and a place at the table for everyone.</p>
+      <div class="actions">
+        <a class="button primary" href="https://cash.app/$wholedonuts">Support TNC ↗</a>
+        <a class="button store" href="mailto:thewholedonuts@gmail.com">Say hello</a>
+      </div>
+      <a class="back" href="#home">← Back to the entry</a>
+    </section>
+  </main>
+
+  <footer><span>+U · Whole Donuts</span><a id="branch-store" href="#home">Open the menu</a></footer>
+  <noscript><p class="noscript-note">JavaScript is off. Use the links above to navigate to <a href="#awd">Whole Donuts</a> or <a href="#tnc">The Nurtured Chef</a>.</p></noscript>
+  <script src="auth-config.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script src="app.js?v=entry2"></script>
+</body>
+</html>
