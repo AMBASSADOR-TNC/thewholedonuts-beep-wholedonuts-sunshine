@@ -1,16 +1,17 @@
 # Whole Donuts Sunshine
 
-Launch companion repository for the canonical [Whole Donuts Universe](https://wenevergonnaclose.com/). It contains an independently deployed public companion, separately operated merch and tooling examples, infrastructure, and domain-routing configuration.
+Canonical code repository for the Whole Donuts LLC ecosystem. It consolidates the public Sunshine entry, curated ecosystem archive, merch platform, Go tooling, infrastructure, and domain routing while keeping public participation credential-free.
 
 ## Repository layout
 
 | Area | Purpose |
 |---|---|
-| `apps/public-site/` | Independently deployed GitHub Pages companion that forwards visitors to the canonical Universe before its optional local stick-figure World. |
+| `apps/public-site/` | Quiet public entry and optional local stick-figure World. |
+| `brain/`, `counter*/`, `dashboard/`, `effort/`, `entry/`, `movement-engine/`, `protocol-engine/`, `table*/`, `vault/` | Curated ecosystem archive assembled into the public artifact. |
 | `apps/merch/api/` | Express API for sponsor merchandise operations and integration webhooks (Shopify, Printful). |
 | `apps/merch/web/` | Next.js merch dashboard for managing orders, sponsors, and referrals. |
 | `apps/universe/` | Go ecosystem tools: domain orchestrator, funnel CLI, analytics dashboard, network and scaling orchestrators, domain config packages, and deployment workflows. |
-| `apps/web/` | Preserved earlier landing-page source; excluded from production serving. |
+| `apps/web/` | Preserved earlier landing-page source, served only under `/landing/` by Docker. |
 | `apps/landing/` | Preserved gateway prototype; not a production serving target. |
 | `data/postgres/migrations/` | Forward-only PostgreSQL migrations for the merch API. |
 | `infra/docker/` | Container build configuration and nginx config. |
@@ -25,5 +26,4 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full layout details,
 [docs/CUTOVER.md](docs/CUTOVER.md) for external launch requirements.
 
 Configured brand domains resolve through `backend/router/config/domains.yaml`.
-Until their dedicated applications are live, the router sends browser traffic to
-the verified canonical Universe root.
+The gateway router serves the public entry and curated archive from this repository.

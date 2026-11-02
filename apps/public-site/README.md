@@ -1,9 +1,8 @@
 # Whole Donuts Sunshine
 
-This directory is Sunshine's independent GitHub Pages artifact. It is a companion
-to, not a replacement for, the canonical [Whole Donuts Universe](https://wenevergonnaclose.com/).
-The first screen links to that gateway. The optional Sunshine World and every
-return link also point to the verified canonical root.
+This directory contains the quiet Sunshine entry and optional local World. During
+deployment, `scripts/prepare-public-site.sh` combines it with the repository's
+curated ecosystem archive.
 
 ## Public behavior
 
@@ -14,7 +13,6 @@ return link also point to the verified canonical root.
 
 ## GitHub Pages
 
-The repository workflow uploads this directory after a `main`-branch change. It
-uses the repository's GitHub Pages URL and has no custom-domain configuration.
-Do not point `wenevergonnaclose.com` at Sunshine; see
-[the external setup guide](../../docs/CUTOVER.md).
+The production workflow assembles and uploads the complete public artifact after a
+`main`-branch change. Custom-domain configuration is intentionally external; see
+[the cutover guide](../../docs/CUTOVER.md).

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whole Donuts — Ecosystem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero fade">
+  <h1>The Ecosystem</h1>
+  <p>The identity engine that powers the movement.</p>
+</div>
+
+<div class="section fade">
+  <p>Paste Launch Cards 11–16 here. This includes your ecosystem structure, lanes, identity flow, and operational architecture.</p>
+</div>
+
+<script src="motion.js"></script>
+</body>
+</html>

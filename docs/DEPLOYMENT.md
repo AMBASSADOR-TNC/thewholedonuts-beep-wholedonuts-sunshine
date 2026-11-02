@@ -17,7 +17,7 @@ This document describes how to deploy the full Whole Donuts ecosystem.
 
 ```bash
 # 1. Clone and configure
-git clone https://github.com/thewholedonuts-beep/wholedonuts-sunshine
+git clone https://github.com/AMBASSADOR-TNC/thewholedonuts-beep-wholedonuts-sunshine
 cd wholedonuts-sunshine
 cp .env.example .env
 # Edit .env with your real credentials
@@ -48,13 +48,12 @@ Set the following in your hosting provider's secret store (never commit these):
 | `SHOPIFY_WEBHOOK_SECRET` | Shopify webhook signature secret |
 | `PRINTFUL_API_KEY` | Printful API token |
 
-### 2. GitHub Pages (Sunshine companion)
+### 2. GitHub Pages
 
-The public site is deployed by the scoped **Deploy public site to GitHub Pages**
-workflow after a change under `apps/public-site/`. Its repository Pages URL is
-Sunshine's independent public address. Do not configure it as the
-`wenevergonnaclose.com` custom domain; that canonical Universe gateway has separate
-hosting. No public account or data-collection service is required.
+The **Validate and deploy public site** workflow tests every service, assembles the
+quiet Sunshine entry with the curated ecosystem archive, and publishes the result.
+No public account or data-collection service is required. Custom-domain DNS remains
+an external owner action.
 
 ### 3. Merch API
 
@@ -86,8 +85,7 @@ psql $DATABASE_URL -f data/postgres/migrations/003_verified_payment_attribution.
 | `merch.yml` | PR / push to `main` | Lint + test merch API and frontend |
 | `public-site-and-tools.yml` | PR / push to `main` | Syntax-check JS, test Go domain-funnels |
 | `universe.yml` | PR / push to `main` | Build + test universe Go CLIs |
-| `deploy-pages.yml` | push to `main` | Deploy public site to GitHub Pages |
-| `deploy-production.yml` | push to `main` | Validate service code without publishing the public site |
+| `deploy-production.yml` | push to `main` | Validate all services, assemble the public artifact, and deploy GitHub Pages |
 
 ---
 

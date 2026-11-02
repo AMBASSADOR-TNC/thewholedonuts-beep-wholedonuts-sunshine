@@ -4,10 +4,11 @@ This repository is ready for review and does not perform a live deployment.
 
 ## GitHub Pages
 
-GitHub Pages is enabled with **GitHub Actions** as the source. The Pages workflow
-uploads `apps/public-site/` to its independent repository Pages URL. Do not add a
-`CNAME` file or point `wenevergonnaclose.com` at this deployment: that domain is the
-canonical Whole Donuts Universe and must retain its own gateway and hosting.
+GitHub Pages is enabled with **GitHub Actions** as the source. The production
+workflow assembles `apps/public-site/` with the curated ecosystem archive by running
+`scripts/prepare-public-site.sh`. Domain DNS changes remain an external owner action;
+do not add a `CNAME` until the intended production hostname and rollback path are
+confirmed.
 
 ## Public-site privacy
 

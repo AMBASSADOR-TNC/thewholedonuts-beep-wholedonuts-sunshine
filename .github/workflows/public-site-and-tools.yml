@@ -4,12 +4,44 @@ on:
   pull_request:
     paths:
       - 'apps/public-site/**'
+      - 'scripts/prepare-public-site.sh'
+      - 'brain/**'
+      - 'counter*/**'
+      - 'dashboard/**'
+      - 'effort/**'
+      - 'entry/**'
+      - 'movement-engine/**'
+      - 'protocol-engine/**'
+      - 'table*/**'
+      - 'vault/**'
+      - 'donor.html'
+      - 'ecosystem.html'
+      - 'identity-law.html'
+      - 'story.html'
+      - 'style.css'
+      - 'motion.js'
       - 'tools/domain-funnels/**'
       - '.github/workflows/public-site-and-tools.yml'
   push:
     branches: [main]
     paths:
       - 'apps/public-site/**'
+      - 'scripts/prepare-public-site.sh'
+      - 'brain/**'
+      - 'counter*/**'
+      - 'dashboard/**'
+      - 'effort/**'
+      - 'entry/**'
+      - 'movement-engine/**'
+      - 'protocol-engine/**'
+      - 'table*/**'
+      - 'vault/**'
+      - 'donor.html'
+      - 'ecosystem.html'
+      - 'identity-law.html'
+      - 'story.html'
+      - 'style.css'
+      - 'motion.js'
       - 'tools/domain-funnels/**'
       - '.github/workflows/public-site-and-tools.yml'
   workflow_dispatch:
@@ -37,6 +69,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version: '1.27'
           cache-dependency-path: tools/domain-funnels/go.sum
       - run: go test ./...

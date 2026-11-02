@@ -1,11 +1,10 @@
-# Whole Donuts Sunshine launch guide
+# Whole Donuts ecosystem launch guide
 
 ## Public launch surface
 
-Sunshine is independently deployed on the repository's GitHub Pages URL and is a
-companion to the canonical [Whole Donuts Universe](https://wenevergonnaclose.com/).
-Its first screen and all return links lead to that verified gateway. Sunshine must
-not be configured as the canonical domain.
+This repository is the canonical Whole Donuts LLC code home. Sunshine remains the
+quiet public entry and optional stick-figure companion. The deployment artifact also
+contains the curated ecosystem archive preserved in the repository root.
 
 The companion has no accounts, forms, analytics, trackers, remote scripts, checkout,
 storefront link, or automatic publication path. Figure customization stays in the
@@ -22,9 +21,11 @@ to `https://wenevergonnaclose.com/`. It has no canonical-domain mapping.
 
 | Area | Launch disposition |
 |---|---|
-| `apps/public-site/` | Included: independent Sunshine companion. |
-| `backend/router/` | Included only as optional redirect configuration. |
-| `apps/landing/` and `apps/web/` | Excluded: preserved prototypes, not production routes. |
+| `apps/public-site/` | Included: quiet Sunshine entry and optional World. |
+| Curated archive directories | Included through `scripts/prepare-public-site.sh`. |
+| `backend/router/` | Included: public entry, archive, and configured service routing. |
+| `apps/landing/` | Excluded: preserved prototype, not a production route. |
+| `apps/web/` | Preserved under `/landing/` in the Docker image only. |
 | `apps/merch/` | Excluded: separately operated code; no public storefront or checkout is linked. |
 | `apps/universe/` and `tools/domain-funnels/` | Excluded: operational tooling, not a Sunshine public destination. |
 | `apps/public-site/templates/` | Excluded from navigation: no confirmed public destination or separate provenance review. |
@@ -34,11 +35,10 @@ provenance, and destination are independently confirmed.
 
 ## Deployment boundary
 
-GitHub Pages deploys `apps/public-site/` after its scoped workflow validates the
-public JavaScript. The separate production-services workflow validates existing
-service code but does not deploy the public site, preventing duplicate Pages
-publishes. Keep the Pages deployment at its repository URL and do not add a custom
-domain that conflicts with the canonical Universe.
+The production workflow validates service code, assembles `apps/public-site/` with
+the curated archive, and performs the repository's only Pages deployment. Keep
+custom-domain changes outside the repository until DNS ownership and rollback are
+confirmed.
 
 ## Contribution boundary
 

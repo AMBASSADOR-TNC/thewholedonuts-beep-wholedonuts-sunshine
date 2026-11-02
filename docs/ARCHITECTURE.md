@@ -2,9 +2,10 @@
 
 | Area | Purpose |
 |---|---|
-| `apps/public-site/` | Independent GitHub Pages Sunshine companion, including the local stick-figure World and links back to the canonical Universe. |
+| `apps/public-site/` | Quiet public entry and optional local stick-figure World. |
+| Curated archive directories | Preserved ecosystem pages assembled beside the public entry by `scripts/prepare-public-site.sh`. |
 | `apps/landing/` | Preserved gateway prototype; not served in production. |
-| `apps/web/` | Preserved earlier landing-page source; excluded from production serving. |
+| `apps/web/` | Preserved earlier landing-page source; exposed only under `/landing/` by Docker. |
 | `apps/merch/api/` | Express API for sponsor merchandise operations and integration webhooks. |
 | `apps/merch/web/` | Next.js merch dashboard. |
 | `apps/universe/` | Go ecosystem tools: domain orchestrator, funnel CLI, analytics dashboard, network and scaling orchestrators, domain config packages, and deployment workflows. |
@@ -21,13 +22,13 @@
 ## Ecosystem overview
 
 ```
-wenevergonnaclose.com  (canonical Whole Donuts Universe)
-         ↑
-Sunshine GitHub Pages companion
-         ↑
-configured brand-domain router fallbacks
+Whole Donuts canonical code repository
+         ├── quiet Sunshine entry
+         ├── curated ecosystem archive
+         ├── merch services
+         └── domain router and Go tooling
 ```
 
-Domain → service mappings live in `backend/router/config/domains.yaml`. The router
-does not claim the canonical domain. When deliberately deployed for a configured
-brand domain, it sends browser requests to the verified canonical Universe root.
+Domain-to-service mappings live in `backend/router/config/domains.yaml`. The gateway
+router serves the public entry and curated archive; specialized routes remain
+separate services.
