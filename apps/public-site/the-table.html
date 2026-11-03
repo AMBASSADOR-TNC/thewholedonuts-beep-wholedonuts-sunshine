@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Table: 118 Elements of Emotional Healing</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px;z-index:9}
+.grid{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(11rem,1fr));gap:.5rem}
+.grid details{border:2px solid currentColor;border-radius:6px;padding:.5rem}
+.grid summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+.grid summary:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffbf00;outline-offset:2px}
+.pending{opacity:.85;font-style:italic}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#grid">Skip to the elements</a>
+<main>
+<h1>The Table: 118 Elements of Emotional Healing</h1>
+<p><a href="index.html">Back to home</a> · <a href="crumbs.html">Crumbs</a> · <a href="stores.html">Stores Gallery</a></p>
+<p id="status" role="status" aria-live="polite"></p>
+<p><strong>+U:</strong> learn from others' past pain to help you along. This is emotional-literacy education, not therapy or medical advice. If you are in danger or thinking of hurting yourself, call or text 988 (US) or your local emergency number, or tell a trusted adult now.</p>
+<p>Every element is a plain expandable item. Use Tab and Enter or Space; nothing is timed, nothing needs a mouse, and motion is off if your system asks for reduced motion.</p>
+<label for="q">Filter by number or name</label>
+<input id="q" type="search" autocomplete="off">
+<button type="button" id="expand">Expand all</button>
+<button type="button" id="collapse">Collapse all</button>
+<ol id="grid" class="grid" aria-label="118 elements"></ol>
+</main>
+<noscript><p>JavaScript is needed to list the elements. The data is in <a href="table-emotions.json">table-emotions.json</a>.</p></noscript>
+<script>
+(function () {
+  var TOTAL = 118, grid = document.getElementById('grid'), q = document.getElementById('q'), status = document.getElementById('status');
+  function render(data) {
+    var by = {}; (data.elements || []).forEach(function (e) { by[e.number] = e; });
+    var filled = 0;
+    for (var n = 1; n <= TOTAL; n++) {
+      var e = by[n], li = document.createElement('li'), d = document.createElement('details'), s = document.createElement('summary'), p = document.createElement('p');
+      s.textContent = n + (e && (e.abbr || e.name) ? '. ' + [e.abbr, e.name].filter(Boolean).join(' \u2013 ') : '. Awaiting text');
+      if (e && (e.definition || e.negative || e.positive)) {
+        filled++;
+        [['Definition', e.definition], ['Negative solution', e.negative], ['Positive solution', e.positive]].forEach(function (x) {
+          if (!x[1]) return; var b = document.createElement('strong'); b.textContent = x[0] + ': ';
+          var q2 = document.createElement('p'); q2.appendChild(b); q2.appendChild(document.createTextNode(x[1])); d.appendChild(q2);
+        });
+      } else { p.textContent = 'The owner has not supplied the text for element ' + n + ' yet.'; p.className = 'pending'; }
+      d.appendChild(s); d.appendChild(p); li.appendChild(d); li.setAttribute('value', n); grid.appendChild(li);
+    }
+    status.textContent = filled + ' of ' + TOTAL + ' elements have text. The rest await the owner\u2019s own words.';
+  }
+  fetch('table-emotions.json').then(function (r) { return r.json(); }).catch(function () { return {}; }).then(render);
+  q.addEventListener('input', function () {
+    var v = q.value.toLowerCase(), shown = 0;
+    Array.prototype.forEach.call(grid.children, function (li) {
+      var m = li.textContent.toLowerCase().indexOf(v) > -1; li.hidden = !m; if (m) shown++;
+    });
+    status.textContent = shown + ' elements shown.';
+  });
+  function all(o) { Array.prototype.forEach.call(grid.querySelectorAll('details'), function (d) { d.open = o; }); }
+  document.getElementById('expand').onclick = function () { all(true); };
+  document.getElementById('collapse').onclick = function () { all(false); };
+})();
+</script>
+</body>
+</html>
