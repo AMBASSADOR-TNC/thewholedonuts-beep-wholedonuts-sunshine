@@ -12,6 +12,9 @@
       <p class="eyebrow">WHOLE DONUTS SUNSHINE</p>
       <h1 id="crumbs-title">The 28 Crumbs</h1>
       <p class="lede">Every crumb from the Whole Donuts particle flow, with its domain alignment and purpose.</p>
+      <p id="crumb-status" role="status" aria-live="polite"></p>
+      <label for="crumb-filter" id="crumb-filter-label" hidden>Filter crumbs</label>
+      <input id="crumb-filter" type="search" autocomplete="off" hidden>
       <table>
         <thead><tr><th scope="col">#</th><th scope="col">Crumb</th><th scope="col">Domain alignment</th><th scope="col">Purpose</th></tr></thead>
         <tbody>
@@ -54,5 +57,17 @@
       <p><a href="./">Back to Sunshine</a></p>
     </section>
   </main>
+  <script>
+    (function () {
+      var f = document.getElementById('crumb-filter'), l = document.getElementById('crumb-filter-label'),
+          s = document.getElementById('crumb-status'), rows = document.querySelectorAll('tbody tr');
+      f.hidden = false; l.hidden = false;
+      f.addEventListener('input', function () {
+        var v = f.value.toLowerCase(), n = 0;
+        rows.forEach(function (r) { var m = r.textContent.toLowerCase().indexOf(v) > -1; r.hidden = !m; if (m) n++; });
+        s.textContent = n + ' of ' + rows.length + ' crumbs shown.';
+      });
+    })();
+  </script>
 </body>
 </html>
