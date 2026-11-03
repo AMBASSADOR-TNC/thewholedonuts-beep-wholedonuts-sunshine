@@ -60,6 +60,21 @@ jobs:
       - run: |
           node --check apps/public-site/world/script.js
 
+  pages-readiness:
+    name: Verify GitHub Pages deployment readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble the Pages artifact
+        run: sh scripts/prepare-public-site.sh _site
+      - name: Verify public entry points
+        run: |
+          test -f _site/index.html
+          test -f _site/world/script.js
+          test -f _site/entry/entry-index.html
+          test -f _site/table/index.html
+          test -f _site/vault/index.html
+
   domain-funnels:
     runs-on: ubuntu-latest
     defaults:
