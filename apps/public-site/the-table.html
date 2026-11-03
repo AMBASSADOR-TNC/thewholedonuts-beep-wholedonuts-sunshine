@@ -29,7 +29,7 @@
 <button type="button" id="collapse">Collapse all</button>
 <ol id="grid" class="grid" aria-label="118 elements"></ol>
 </main>
-<noscript><p>JavaScript is needed to list the elements. The data is in <a href="table-emotions.json">table-emotions.json</a>.</p></noscript>
+<noscript><p>JavaScript is needed to list the elements. The data is in <a href="table-emotions-118.json">table-emotions-118.json</a>.</p></noscript>
 <script>
 (function () {
   var TOTAL = 118, grid = document.getElementById('grid'), q = document.getElementById('q'), status = document.getElementById('status');
@@ -50,7 +50,7 @@
     }
     status.textContent = filled + ' of ' + TOTAL + ' elements have text. The rest await the owner\u2019s own words.';
   }
-  fetch('table-emotions.json').then(function (r) { return r.json(); }).catch(function () { return {}; }).then(render);
+  fetch('table-emotions-118.json').then(function (r) { return r.json(); }).catch(function () { return {}; }).then(render);
   q.addEventListener('input', function () {
     var v = q.value.toLowerCase(), shown = 0;
     Array.prototype.forEach.call(grid.children, function (li) {

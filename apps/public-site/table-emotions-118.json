@@ -1,0 +1,1068 @@
+{
+    "_note":  "Emotions marked source=owner use the owner\u0027s names and descriptions from WHOLEDONUTS.CLOUD/emotional-periodic-table.html (Table928). source=draft entries and all solutions are original drafts for the owner to edit. Reflection aid, not diagnosis or treatment.",
+    "total":  118,
+    "elements":  [
+                     {
+                         "number":  1,
+                         "abbr":  "CA",
+                         "name":  "Calm",
+                         "definition":  "Your mind and body feel steady; often after rest, safety, or understanding.",
+                         "negative":  "If calm feels like numbness, check in with what you feel.",
+                         "positive":  "Protect it with rest, nature, and slow breaths.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  2,
+                         "abbr":  "CY",
+                         "name":  "Curious",
+                         "definition":  "You want to explore or learn something new; the beginning of growth.",
+                         "negative":  "If it leads to risk, pause and choose safe ways to explore.",
+                         "positive":  "Ask questions and try things.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  3,
+                         "abbr":  "OV",
+                         "name":  "Overwhelmed",
+                         "definition":  "Too many thoughts or feelings at once; signals a need for pause or support.",
+                         "negative":  "List everything, pick one thing, and ask for help.",
+                         "positive":  "One step at a time works.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  4,
+                         "abbr":  "CF",
+                         "name":  "Confused",
+                         "definition":  "Something doesn’t make sense yet; first step toward clarity.",
+                         "negative":  "If it slips, list past things you handled.",
+                         "positive":  "Keep learning and stay open to feedback.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  5,
+                         "abbr":  "HO",
+                         "name":  "Hopeful",
+                         "definition":  "You can see a good future or positive change coming; spark of momentum.",
+                         "negative":  "If it is fading, borrow hope from others\u0027 stories.",
+                         "positive":  "Pair it with a step.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  6,
+                         "abbr":  "SA",
+                         "name":  "Sad",
+                         "definition":  "Something mattered and changed; sign of care, connection, and healing.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  7,
+                         "abbr":  "AX",
+                         "name":  "Anxious",
+                         "definition":  "Your mind imagines danger or uncertainty; needs grounding and reassurance.",
+                         "negative":  "Breathe in for four, out for six; ground yourself by naming five things you see.",
+                         "positive":  "Turn worry into a short plan and ask for support.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  8,
+                         "abbr":  "EX",
+                         "name":  "Excited",
+                         "definition":  "Your energy rises toward something good; emotion of action and movement.",
+                         "negative":  "If nerves mix in, breathe and prepare.",
+                         "positive":  "Use the energy to act.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  9,
+                         "abbr":  "LO",
+                         "name":  "Lonely",
+                         "definition":  "You feel separate or unseen; signals a need for connection or being heard.",
+                         "negative":  "Reach out, even briefly; join something with shared interests.",
+                         "positive":  "Be the friend you wish you had.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  10,
+                         "abbr":  "EM",
+                         "name":  "Embarrassed",
+                         "definition":  "You feel exposed or judged; often tied to mistakes or attention.",
+                         "negative":  "Remember it fades; breathe and laugh if you can.",
+                         "positive":  "Owning it makes you relatable.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  11,
+                         "abbr":  "AN",
+                         "name":  "Angry",
+                         "definition":  "You feel something is unfair or wrong; energy that needs safe direction.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  12,
+                         "abbr":  "FR",
+                         "name":  "Frustrated",
+                         "definition":  "You feel blocked from what you want; calls for adjustment or patience.",
+                         "negative":  "Take a break and try another route.",
+                         "positive":  "Persistence plus new ideas solves a lot.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  13,
+                         "abbr":  "GR",
+                         "name":  "Grateful",
+                         "definition":  "You notice something good and appreciate it; strengthens relationships.",
+                         "negative":  "If it feels forced, start with something tiny.",
+                         "positive":  "Write or say three thanks a day.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  14,
+                         "abbr":  "PR",
+                         "name":  "Proud",
+                         "definition":  "You feel good about what you did or who you’re becoming.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  15,
+                         "abbr":  "GU",
+                         "name":  "Guilty",
+                         "definition":  "You feel you did something wrong; invites repair and learning.",
+                         "negative":  "Make it right if you can and learn from it.",
+                         "positive":  "Guilt shows your values; let it guide you.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  16,
+                         "abbr":  "AS",
+                         "name":  "Ashamed",
+                         "definition":  "You feel something is wrong with you; needs compassion and truth.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  17,
+                         "abbr":  "JE",
+                         "name":  "Jealous",
+                         "definition":  "You want what someone else has; can reveal your own desires.",
+                         "negative":  "Talk honestly about the fear instead of blaming.",
+                         "positive":  "Build trust and your own worth.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  18,
+                         "abbr":  "EN",
+                         "name":  "Envious",
+                         "definition":  "You compare yourself and feel less; invites self‑worth and perspective.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  19,
+                         "abbr":  "BO",
+                         "name":  "Bored",
+                         "definition":  "Nothing feels engaging; signals a need for challenge or creativity.",
+                         "negative":  "Try something new, however small; move your body.",
+                         "positive":  "Boredom makes room for creativity; follow an idea.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  20,
+                         "abbr":  "TI",
+                         "name":  "Tired",
+                         "definition":  "Your body or mind needs rest; not weakness, just a limit.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  21,
+                         "abbr":  "ST",
+                         "name":  "Stressed",
+                         "definition":  "Too much pressure or expectation; needs boundaries and support.",
+                         "negative":  "Move, sleep, and pare down.",
+                         "positive":  "Use it to prioritize.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  22,
+                         "abbr":  "RL",
+                         "name":  "Relieved",
+                         "definition":  "Something hard is over or safer; your system is exhaling.",
+                         "negative":  "Use the calm to rest.",
+                         "positive":  "Notice what helped.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  23,
+                         "abbr":  "IN",
+                         "name":  "Inspired",
+                         "definition":  "You see something that makes you want to create or act.",
+                         "negative":  "If it fades, write it down fast.",
+                         "positive":  "Start now, even small.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  24,
+                         "abbr":  "MO",
+                         "name":  "Motivated",
+                         "definition":  "You feel ready to move toward a goal; energy with direction.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  25,
+                         "abbr":  "DA",
+                         "name":  "Disappointed",
+                         "definition":  "Reality didn’t match your hope; invites new expectations.",
+                         "negative":  "Let yourself feel it, then ask what is still possible.",
+                         "positive":  "New hopes can grow from old ones.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  26,
+                         "abbr":  "RJ",
+                         "name":  "Rejected",
+                         "definition":  "You feel pushed away or unwanted; needs care and perspective.",
+                         "negative":  "It is not a verdict on your worth; lean on supportive people.",
+                         "positive":  "Keep trying where you are valued.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  27,
+                         "abbr":  "IC",
+                         "name":  "Included",
+                         "definition":  "You feel part of something; belonging strengthens identity.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  28,
+                         "abbr":  "SC",
+                         "name":  "Secure",
+                         "definition":  "You feel safe and supported; foundation for growth.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  29,
+                         "abbr":  "IS",
+                         "name":  "Insecure",
+                         "definition":  "You doubt your worth or place; needs truth and reassurance.",
+                         "negative":  "Notice your strengths and talk back to harsh thoughts.",
+                         "positive":  "Surround yourself with people who lift you.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  30,
+                         "abbr":  "CN",
+                         "name":  "Confident",
+                         "definition":  "You trust your ability to handle what’s ahead.",
+                         "negative":  "Break it into parts and ask one clear question.",
+                         "positive":  "Questions lead to understanding; ask them.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  31,
+                         "abbr":  "NE",
+                         "name":  "Nervous",
+                         "definition":  "You feel shaky before something important; often near growth.",
+                         "negative":  "Slow your breathing and prepare.",
+                         "positive":  "Nerves show you care.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  32,
+                         "abbr":  "PE",
+                         "name":  "Peaceful",
+                         "definition":  "Your mind and body feel quiet and okay, even if life isn’t perfect.",
+                         "negative":  "If it feels fragile, return to your breath.",
+                         "positive":  "Protect it with routines you love.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  33,
+                         "abbr":  "RT",
+                         "name":  "Restless",
+                         "definition":  "You feel like you need to move or change something.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  34,
+                         "abbr":  "LS",
+                         "name":  "Lost",
+                         "definition":  "You don’t know what to do next; invites guidance and small steps.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  35,
+                         "abbr":  "FU",
+                         "name":  "Found",
+                         "definition":  "You feel seen, understood, or back on track.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  36,
+                         "abbr":  "HY",
+                         "name":  "Hurt",
+                         "definition":  "Something or someone impacted you deeply; needs care and validation.",
+                         "negative":  "Name it and say it to someone safe.",
+                         "positive":  "Hurt heals with care and time.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  37,
+                         "abbr":  "SP",
+                         "name":  "Supported",
+                         "definition":  "You feel backed up by someone or something; you’re not alone.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  38,
+                         "abbr":  "IG",
+                         "name":  "Ignored",
+                         "definition":  "You feel unseen or unheard; your voice matters.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  39,
+                         "abbr":  "VA",
+                         "name":  "Validated",
+                         "definition":  "Someone understands and accepts your experience as real.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  40,
+                         "abbr":  "CO",
+                         "name":  "Conflicted",
+                         "definition":  "Two parts of you want different things; needs sorting and patience.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  41,
+                         "abbr":  "DE",
+                         "name":  "Determined",
+                         "definition":  "You feel committed to keep going, even when it’s hard.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  42,
+                         "abbr":  "HL",
+                         "name":  "Hopeless",
+                         "definition":  "You can’t see a way forward yet; needs light, support, and time.",
+                         "negative":  "Reach out today; call or text 988 (US) if you feel unsafe.",
+                         "positive":  "Others have felt this and found a way; you can too.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  43,
+                         "abbr":  "OP",
+                         "name":  "Optimistic",
+                         "definition":  "You expect things can improve; lens of possibility.",
+                         "negative":  "Balance it with a plan.",
+                         "positive":  "Use it to start things.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  44,
+                         "abbr":  "PM",
+                         "name":  "Pessimistic",
+                         "definition":  "You expect things to go wrong; often a protection strategy.",
+                         "negative":  "Ask what evidence supports it and what else could be true.",
+                         "positive":  "Use it to prepare, not to quit.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  45,
+                         "abbr":  "PO",
+                         "name":  "Protective",
+                         "definition":  "You want to guard yourself or others from harm.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  46,
+                         "abbr":  "PL",
+                         "name":  "Playful",
+                         "definition":  "You feel free to joke, explore, and have fun.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  47,
+                         "abbr":  "SR",
+                         "name":  "Serious",
+                         "definition":  "You feel focused and aware of the weight of something.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  48,
+                         "abbr":  "CE",
+                         "name":  "Connected",
+                         "definition":  "You feel close to someone or something meaningful.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  49,
+                         "abbr":  "DT",
+                         "name":  "Detached",
+                         "definition":  "You feel distant or numb; often a way to cope.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  50,
+                         "abbr":  "NU",
+                         "name":  "Numb",
+                         "definition":  "You don’t feel much at all; your system may be protecting you.",
+                         "negative":  "Warm water, movement, and talking to someone can help.",
+                         "positive":  "Feeling returns gently with care.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  51,
+                         "abbr":  "VU",
+                         "name":  "Vulnerable",
+                         "definition":  "You feel open and exposed; also where real connection happens.",
+                         "negative":  "Share with safe people only.",
+                         "positive":  "It builds real connection.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  52,
+                         "abbr":  "BR",
+                         "name":  "Brave",
+                         "definition":  "You act even while feeling fear or uncertainty.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  53,
+                         "abbr":  "SD",
+                         "name":  "Scared",
+                         "definition":  "You sense danger; needs safety, truth, and support.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  54,
+                         "abbr":  "CT",
+                         "name":  "Content",
+                         "definition":  "You feel okay with what you have right now.",
+                         "negative":  "Ask what hurt sits underneath and try curiosity instead.",
+                         "positive":  "Replace judgment with a boundary that respects both of you.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  55,
+                         "abbr":  "UN",
+                         "name":  "Unsatisfied",
+                         "definition":  "You want more or different; can lead to growth or frustration.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  56,
+                         "abbr":  "CR",
+                         "name":  "Creative",
+                         "definition":  "You feel ideas and expression wanting to come out.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  57,
+                         "abbr":  "BL",
+                         "name":  "Blocked",
+                         "definition":  "You feel stuck creatively or emotionally; needs space or change.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  58,
+                         "abbr":  "TU",
+                         "name":  "Trusting",
+                         "definition":  "You believe someone or something is safe and reliable.",
+                         "negative":  "If broken, rebuild slowly.",
+                         "positive":  "Be trustworthy first.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  59,
+                         "abbr":  "DI",
+                         "name":  "Distrustful",
+                         "definition":  "You doubt safety or honesty; often from past hurt.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  60,
+                         "abbr":  "RG",
+                         "name":  "Regretful",
+                         "definition":  "You wish you had chosen differently; invites learning and repair.",
+                         "negative":  "Learn, apologize if needed, and move on.",
+                         "positive":  "Let it guide your next choice.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  61,
+                         "abbr":  "HP",
+                         "name":  "Hope‑tired",
+                         "definition":  "You’ve hoped for a long time and feel worn out.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  62,
+                         "abbr":  "SU",
+                         "name":  "Surprised",
+                         "definition":  "Something unexpected happened; can be good or hard.",
+                         "negative":  "Take a breath before reacting.",
+                         "positive":  "Stay curious.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  63,
+                         "abbr":  "SK",
+                         "name":  "Shocked",
+                         "definition":  "Something intense and sudden impacted you deeply.",
+                         "negative":  "Sit, breathe, drink water, and get support.",
+                         "positive":  "Give yourself time to adjust.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  64,
+                         "abbr":  "JY",
+                         "name":  "Joyful",
+                         "definition":  "You feel deep happiness and aliveness.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  65,
+                         "abbr":  "BI",
+                         "name":  "Bittersweet",
+                         "definition":  "You feel happy and sad at the same time.",
+                         "negative":  "Write it out, then ask what you need to feel better.",
+                         "positive":  "Letting it soften frees your energy for what is good.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  66,
+                         "abbr":  "PC",
+                         "name":  "Protectively Angry",
+                         "definition":  "You feel anger because you care and want safety.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  67,
+                         "abbr":  "MI",
+                         "name":  "Misunderstood",
+                         "definition":  "You feel people don’t get your experience or intent.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  68,
+                         "abbr":  "SN",
+                         "name":  "Seen",
+                         "definition":  "You feel truly noticed and understood.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  69,
+                         "abbr":  "OE",
+                         "name":  "Overlooked",
+                         "definition":  "You feel passed over or skipped; your presence matters.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  70,
+                         "abbr":  "EC",
+                         "name":  "Encouraged",
+                         "definition":  "You feel lifted up by words or actions from others.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  71,
+                         "abbr":  "DS",
+                         "name":  "Discouraged",
+                         "definition":  "You feel weighed down or doubting your ability.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  72,
+                         "abbr":  "RS",
+                         "name":  "Resentful",
+                         "definition":  "You hold onto anger about something that felt unfair.",
+                         "negative":  "Say what you need and set a boundary.",
+                         "positive":  "Releasing it gives you energy.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  73,
+                         "abbr":  "RU",
+                         "name":  "Reluctant",
+                         "definition":  "You feel pulled toward something but hesitant to act.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  74,
+                         "abbr":  "EA",
+                         "name":  "Eager",
+                         "definition":  "You feel ready and wanting to move forward.",
+                         "negative":  "Slow down so you do not skip steps.",
+                         "positive":  "Channel it into prepared action.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  75,
+                         "abbr":  "OR",
+                         "name":  "Overconfident",
+                         "definition":  "You may underestimate risk; invites balance.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  76,
+                         "abbr":  "UD",
+                         "name":  "Underconfident",
+                         "definition":  "You underestimate your ability; invites truth and support.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  77,
+                         "abbr":  "HM",
+                         "name":  "Homesick",
+                         "definition":  "You miss a place, time, or feeling of home.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  78,
+                         "abbr":  "BE",
+                         "name":  "Belonging",
+                         "definition":  "You feel like you fit and are accepted.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  79,
+                         "abbr":  "OU",
+                         "name":  "Out of Place",
+                         "definition":  "You feel like you don’t fit the environment or group.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  80,
+                         "abbr":  "FC",
+                         "name":  "Focused",
+                         "definition":  "Your attention is steady on one thing.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  81,
+                         "abbr":  "DR",
+                         "name":  "Distracted",
+                         "definition":  "Your attention keeps jumping; needs refocus or rest.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  82,
+                         "abbr":  "IM",
+                         "name":  "Impatient",
+                         "definition":  "You want something to happen faster; invites pacing.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  83,
+                         "abbr":  "PT",
+                         "name":  "Patient",
+                         "definition":  "You’re willing to wait and trust the process.",
+                         "negative":  "If it is wearing thin, take a break.",
+                         "positive":  "It lets good things grow.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  84,
+                         "abbr":  "CP",
+                         "name":  "Competitive",
+                         "definition":  "You want to win or be the best; can motivate or stress.",
+                         "negative":  "If it drains you, set limits and refill your own cup.",
+                         "positive":  "Offer presence; it is often enough.",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  85,
+                         "abbr":  "CI",
+                         "name":  "Cooperative",
+                         "definition":  "You want to work together and share success.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  86,
+                         "abbr":  "PI",
+                         "name":  "Protectively Quiet",
+                         "definition":  "You stay silent to feel safe; your voice still matters.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  87,
+                         "abbr":  "ER",
+                         "name":  "Expressive",
+                         "definition":  "You share your thoughts and feelings openly.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  88,
+                         "abbr":  "OX",
+                         "name":  "Overexposed",
+                         "definition":  "You feel like you shared too much; needs safety and boundaries.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  89,
+                         "abbr":  "GO",
+                         "name":  "Grounded",
+                         "definition":  "You feel steady, present, and connected to reality.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  90,
+                         "abbr":  "SO",
+                         "name":  "Spaced Out",
+                         "definition":  "You feel far away in your mind; often from stress or overload.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  91,
+                         "abbr":  "CS",
+                         "name":  "Curious About Self",
+                         "definition":  "You want to understand who you are becoming.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  92,
+                         "abbr":  "CB",
+                         "name":  "Curious About Others",
+                         "definition":  "You want to understand people around you.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  93,
+                         "abbr":  "PV",
+                         "name":  "Protectively Closed",
+                         "definition":  "You keep your heart guarded; often from past hurt.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  94,
+                         "abbr":  "ON",
+                         "name":  "Open‑hearted",
+                         "definition":  "You feel willing to connect deeply, even with risk.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  95,
+                         "abbr":  "FT",
+                         "name":  "Future‑focused",
+                         "definition":  "Your mind is on what’s ahead; can inspire or worry.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  96,
+                         "abbr":  "PS",
+                         "name":  "Past‑stuck",
+                         "definition":  "Your mind keeps replaying what already happened.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  97,
+                         "abbr":  "PN",
+                         "name":  "Present‑aware",
+                         "definition":  "You notice what’s happening right now.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  98,
+                         "abbr":  "ID",
+                         "name":  "Identity‑curious",
+                         "definition":  "You’re wondering who you are and who you’ll be.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  99,
+                         "abbr":  "IE",
+                         "name":  "Identity‑tired",
+                         "definition":  "You feel worn out from trying to figure yourself out.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  100,
+                         "abbr":  "IT",
+                         "name":  "Identity‑proud",
+                         "definition":  "You feel good about who you’re becoming.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  101,
+                         "abbr":  "II",
+                         "name":  "Identity‑uncertain",
+                         "definition":  "You’re not sure yet; that’s okay—this is the path.",
+                         "negative":  "",
+                         "positive":  "",
+                         "source":  "owner"
+                     },
+                     {
+                         "number":  102,
+                         "abbr":  "GI",
+                         "name":  "Grief",
+                         "definition":  "The ache of a loss.",
+                         "negative":  "Cry, talk, and remember; do not rush it, and get support.",
+                         "positive":  "Honor what you loved and let others carry you.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  103,
+                         "abbr":  "LV",
+                         "name":  "Love",
+                         "definition":  "Deep care and connection.",
+                         "negative":  "If love hurts, protect your safety and boundaries.",
+                         "positive":  "Express it often and plainly.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  104,
+                         "abbr":  "JO",
+                         "name":  "Joy",
+                         "definition":  "Deep, bright gladness.",
+                         "negative":  "If you fear it will go, savor it now.",
+                         "positive":  "Spread it.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  105,
+                         "abbr":  "FE",
+                         "name":  "Fear",
+                         "definition":  "Alarm at a possible danger.",
+                         "negative":  "Check if the danger is real; breathe and ask for help.",
+                         "positive":  "Fear can protect you; use it as a guide.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  106,
+                         "abbr":  "HA",
+                         "name":  "Happiness",
+                         "definition":  "A general feeling of well-being.",
+                         "negative":  "If it feels unearned, accept it anyway.",
+                         "positive":  "Share it and build habits that keep it.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  107,
+                         "abbr":  "KI",
+                         "name":  "Kindness",
+                         "definition":  "Gentle, generous care.",
+                         "negative":  "Include yourself; kindness is not self-neglect.",
+                         "positive":  "One small kind act can change a day.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  108,
+                         "abbr":  "FO",
+                         "name":  "Forgiveness",
+                         "definition":  "Releasing the hold a hurt has on you.",
+                         "negative":  "You can forgive without staying close to someone harmful.",
+                         "positive":  "It frees you; go at your own pace.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  109,
+                         "abbr":  "RE",
+                         "name":  "Resilience",
+                         "definition":  "Bouncing back from hardship.",
+                         "negative":  "Rest and ask for help; resilience is not doing it alone.",
+                         "positive":  "Remember what got you through.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  110,
+                         "abbr":  "WT",
+                         "name":  "Worthiness",
+                         "definition":  "Knowing you deserve care and belonging.",
+                         "negative":  "On low days, repeat it and ask someone who loves you.",
+                         "positive":  "Live it by treating yourself and others well.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  111,
+                         "abbr":  "CU",
+                         "name":  "Courage",
+                         "definition":  "Acting well even while afraid.",
+                         "negative":  "If you feel you have none, take the smallest brave step.",
+                         "positive":  "Share your story; it gives others courage.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  112,
+                         "abbr":  "EP",
+                         "name":  "Empathy",
+                         "definition":  "Understanding how someone else feels.",
+                         "negative":  "If you absorb too much, take space.",
+                         "positive":  "Listen without fixing; it helps.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  113,
+                         "abbr":  "RP",
+                         "name":  "Respect",
+                         "definition":  "Valuing someone\u0027s worth and boundaries.",
+                         "negative":  "If it is not returned, protect yourself.",
+                         "positive":  "Give it freely and model it.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  114,
+                         "abbr":  "LY",
+                         "name":  "Loyalty",
+                         "definition":  "Staying faithful to people or values.",
+                         "negative":  "If it keeps you in harm, rethink it.",
+                         "positive":  "Be dependable and honest.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  115,
+                         "abbr":  "SE",
+                         "name":  "Serenity",
+                         "definition":  "Deep, quiet peace.",
+                         "negative":  "Do not avoid problems; return to them calm.",
+                         "positive":  "Practice stillness daily.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  116,
+                         "abbr":  "SH",
+                         "name":  "Shame",
+                         "definition":  "Feeling that you are bad, not just that you did something bad.",
+                         "negative":  "Share with someone safe; shame shrinks in kind company.",
+                         "positive":  "You are more than your mistakes.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  117,
+                         "abbr":  "PA",
+                         "name":  "Panic",
+                         "definition":  "Sudden, intense fear.",
+                         "negative":  "Breathe slowly, feel your feet on the floor, and tell yourself it will pass.",
+                         "positive":  "Practice calm skills when okay.",
+                         "source":  "draft"
+                     },
+                     {
+                         "number":  118,
+                         "abbr":  "AW",
+                         "name":  "Awe",
+                         "definition":  "Feeling small in front of something vast or beautiful.",
+                         "negative":  "If it feels overwhelming, ground yourself with slow breaths.",
+                         "positive":  "Seek it out: sky, music, stories, people at their best.",
+                         "source":  "draft"
+                     }
+                 ]
+}
