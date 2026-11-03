@@ -1,28 +1,6 @@
 name: Validate public site and tools
 
-on:
-  pull_request:
-    paths:
-      - 'apps/public-site/**'
-      - 'scripts/prepare-public-site.sh'
-      - 'brain/**'
-      - 'counter*/**'
-      - 'dashboard/**'
-      - 'effort/**'
-      - 'entry/**'
-      - 'movement-engine/**'
-      - 'protocol-engine/**'
-      - 'table*/**'
-      - 'vault/**'
-      - 'donor.html'
-      - 'ecosystem.html'
-      - 'identity-law.html'
-      - 'story.html'
-      - 'style.css'
-      - 'motion.js'
-      - 'tools/domain-funnels/**'
-      - '.github/workflows/public-site-and-tools.yml'
-  push:
+on:`n  pull_request:`n  push:
     branches: [main]
     paths:
       - 'apps/public-site/**'
