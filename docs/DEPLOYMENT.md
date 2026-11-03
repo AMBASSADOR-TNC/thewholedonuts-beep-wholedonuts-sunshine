@@ -83,7 +83,7 @@ psql $DATABASE_URL -f data/postgres/migrations/003_verified_payment_attribution.
 | Workflow | Trigger | What it does |
 |---|---|---|
 | `merch.yml` | PR / push to `main` | Lint + test merch API and frontend |
-| `public-site-and-tools.yml` | PR / push to `main` | Syntax-check JS, test Go domain-funnels |
+| `public-site-and-tools.yml` | PR / push to `main` | Syntax-check JS, assemble and verify the Pages artifact, test Go domain-funnels |
 | `universe.yml` | PR / push to `main` | Build + test universe Go CLIs |
 | `deploy-production.yml` | push to `main` | Validate all services, assemble the public artifact, and deploy GitHub Pages |
 
