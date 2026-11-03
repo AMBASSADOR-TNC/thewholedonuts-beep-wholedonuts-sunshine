@@ -24,6 +24,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full layout details,
 [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for the production launch guide,
 [docs/API.md](docs/API.md) for API documentation, and
 [docs/CUTOVER.md](docs/CUTOVER.md) for external launch requirements.
+See [docs/WORKFLOW.md](docs/WORKFLOW.md) for the contribution workflow.
 
 Configured brand domains resolve through `backend/router/config/domains.yaml`.
 The gateway router serves the public entry and curated archive from this repository.
